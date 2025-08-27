@@ -13,7 +13,7 @@ export default function Hero() {
         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">{t('home.headline')}</h1>
         <p className="mt-4 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">{t('home.subtitle')}</p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href="#booking" className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-brand-orange px-6 py-3 font-semibold text-black shadow-soft">{t('home.ctaBook')}</a>
+          <a href="#booking" className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-black shadow-soft">{t('home.ctaBook')}</a>
           <a href="/rooms" className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl border border-white/20 px-6 py-3 font-semibold text-white hover:border-white/40">{t('home.ctaRooms')}</a>
         </div>
       </div>

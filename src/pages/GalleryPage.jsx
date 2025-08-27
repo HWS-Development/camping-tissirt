@@ -98,7 +98,7 @@ export default function GalleryPage() {
               </button>
               <button
                 onClick={close}
-                className="ml-4 px-4 py-2 rounded-lg bg-brand-orange text-black font-semibold"
+                className="ml-4 px-4 py-2 rounded-lg bg-primary text-black font-semibold"
               >
                 {t('galleryPage.close')}
               </button>

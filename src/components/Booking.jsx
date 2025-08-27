@@ -69,7 +69,7 @@ export default function Booking() {
                 className="mt-1 w-full rounded-xl border border-black/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-orange" />
             </div>
             <div className="md:col-span-1">
-              <button className="w-full inline-flex items-center justify-center rounded-xl bg-brand-orange px-6 py-3 font-semibold text-black shadow-soft">
+              <button className="w-full inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-black shadow-soft">
                 {t('booking.labels.search')}
               </button>
             </div>

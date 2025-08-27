@@ -42,7 +42,7 @@ const items = [
             {items.map(i => (
               <div key={i.title} className="rounded-2xl border border-black/10 bg-white p-6 shadow-soft">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-orange/10 text-brand-orange">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-brand-orange">
                     <Icon name={i.icon} />
                   </span>
                   <h3 className="font-semibold">{i.title}</h3>

@@ -10,9 +10,9 @@ export default function Location() {
             <h2 className="text-3xl sm:text-4xl font-bold">{t('location.heading')}</h2>
             <p className="mt-3 text-brand-black/70">{t('location.desc')}</p>
             <ul className="mt-6 grid gap-3">
-              <li className="flex items-center gap-3"><span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-orange/10 text-brand-orange">📍</span> {t('location.bullets.address')}</li>
-              <li className="flex items-center gap-3"><span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-orange/10 text-brand-orange">🚶</span> {t('location.bullets.walk')}</li>
-              <li className="flex items-center gap-3"><span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-orange/10 text-brand-orange">🚕</span> {t('location.bullets.airport')}</li>
+              <li className="flex items-center gap-3"><span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-brand-orange">📍</span> {t('location.bullets.address')}</li>
+              <li className="flex items-center gap-3"><span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-brand-orange">🚶</span> {t('location.bullets.walk')}</li>
+              <li className="flex items-center gap-3"><span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-brand-orange">🚕</span> {t('location.bullets.airport')}</li>
             </ul>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-soft border border-black/10">

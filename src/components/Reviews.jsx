@@ -16,7 +16,7 @@ export default function Reviews() {
           {reviews.map((r, i) => (
             <article key={i} className="rounded-2xl border border-black/10 bg-white p-6 shadow-soft">
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-orange/10 text-brand-orange text-lg">★</span>
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-brand-orange text-lg">★</span>
                 <div>
                   <h3 className="font-semibold">{r.name}</h3>
                   <div className="text-xs text-brand-black/60">★★★★★</div>
