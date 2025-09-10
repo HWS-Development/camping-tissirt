@@ -12,7 +12,6 @@ export default function Gallery() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold">{t('gallery.heading')}</h2>
-          <p className="mt-2 text-brand-black/70">{t('gallery.sub')}</p>
         </div>
         <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {images.map((src, i) => (

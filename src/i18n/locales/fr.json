@@ -5,7 +5,7 @@
       "welcome": "Bienvenue à {{city}}",
       "city": "Marrakech",
       "headline": "Ourika Camp",
-      "subtitle": "Un havre de paix à deux pas des souks. Chaleur orangée, élégance noire et teintes du désert.",
+      "subtitle": " Un refuge chaleureux aux portes de Marrakech, où    élégance et authenticité se rencontrent pour une expérience inoubliable",
       "ctaBook": "Réserver votre séjour",
       "ctaRooms": "Découvrir les chambres"
     },
@@ -42,9 +42,9 @@
         "heading": "Avis des clients",
         "sub": "Impressions authentiques de nos récents visiteurs.",
         "items": [
-            { "name": "yahya lassfar", "text": "C’est un endroit très merveilleux.❤️ J’ai beaucoup aimé le lieu et la nourriture était incroyable🥰." },
-            { "name": "Sylvia", "text": "Endroit idéal pour séjourner, se rafraîchir dans la piscine, faire sa lessive et se détendre !! Convient aussi aux grands camions aménagés." },
-            { "name": "Freddy Bryson-Bassett", "text": "Super site avec de bonnes installations, j’y reviendrai." }
+            { "name": "", "text": "Un grand merci pour l'excellent service de l'hôtel. J'ai particulièrement apprécié le professionnalisme et la gentillesse de M. Youssef et Abdellatif, qui ont rendu mon séjour encore plus agréable. Bravo et bonne continuation.🥰." },
+            { "name": "Sylvia", "text": "Excellente expérience.J'y étais avec des amis il y a quelques semaines pour me reposer, et nous n'avons pas été déçus !Personnel chaleureux et accueillant, nourriture de qualité et abordable, grande piscine et, plus généralement, hôtel très charmant." },
+            { "name": "Freddy Bryson-Bassett", "text": "Très bonne ambiance. Plats de qualité et baignade paisible dans une belle piscine au son de la bonne musique. À faire en famille ou entre amis. Des activités sont même proposées aux enfants (ping-pong, basket-ball…)." }
         ]
     },
     "booking": {
@@ -56,22 +56,24 @@
     },
     "gallery": {
       "heading": "Galerie",
-      "sub": "Un aperçu de couleurs et de calme."
+      "sub": " A touch of color and serenity."
     },
     "location": {
-      "heading": "Au cœur de Marrakech",
-      "desc": "Nichée près de la médina, Riad El Baraka se trouve à quelques pas de Jemaa el-Fna et des souks animés.",
-      "bullets": {
-        "address": "Km 10, Route de Ourika, Marrakesh 44000",
-        "walk": "15-20 minutes jusqu’à Jemaa el-Fna",
-        "airport": "20-25 minutes de l’aéroport RAK"
-      }
-    },
+  "heading": "Un havre de paix, aux portes de la ville",
+  "desc": "Ourika Camp offre un accès rapide aux souks animés et à la médina historique, tout en vous garantissant l’élégance et la sérénité d’une adresse exclusive.",
+  "points": [
+    "Un havre de paix à proximité des attractions incontournables de la ville",
+    "Aux portes de la vallée de l’Ourika et de l’Atlas, idéal pour des escapades inoubliables",
+    "Des chambres spacieuses, alliant confort moderne et charme authentique"
+  ]
+}
+,
+
     "contact": {
       "heading": "Contactez-nous",
       "sub": "Questions, réservations de groupe ou demandes spéciales — nous sommes là pour vous aider.",
       "form": { "name": "Nom", "email": "E-mail", "message": "Message", "send": "Envoyer", "thanks": "Merci ! Nous vous répondrons rapidement." },
-      "direct": { "heading": "Contacts directs",  "phone": "📞 +212 648-489748", "email": "✉️ hello@ourikacamp.com", "address": "📍 Marrakech, Morocco"},
+      "direct": { "heading": "Contacts directs",  "phone": "📞 +212 648-489748", "email": "✉️ ourikacamp@outlook.com", "address": "📍 Marrakech, Morocco"},
       "follow": "Suivre"
     },
     "footer": {

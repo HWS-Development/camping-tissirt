@@ -1,6 +1,6 @@
 import Hero from '../components/Hero'
 import Booking from '../components/Booking'
-import Rooms from '../components/Rooms'
+
 import Reviews from '../components/Reviews'
 import Gallery from '../components/Gallery'
 import Location from '../components/Location'
@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Hero />
       <Booking />
-      <Rooms />
+  
       <Reviews />
       <Gallery />
       <Location />

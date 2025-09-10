@@ -44,7 +44,7 @@ export default function Booking() {
   return (
     <section id="booking" className="relative -mt-12 pb-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="tile-top rounded-2xl bg-white shadow-soft p-6 sm:p-8">
+        <div className="rounded-2xl bg-white shadow-soft p-6 sm:p-8 border-t-[10px] border-[#ca9d75]">
           <form onSubmit={onSearch} className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
             <div>
               <label className="block text-sm font-medium text-brand-black/80">{t('booking.labels.checkin')}</label>

@@ -41,7 +41,7 @@ export default function Rooms() {
                 <p className="mt-1 text-sm text-brand-black/70">{t(`roomsPage.items.${room.key}.desc`)}</p>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold">{room.price}</span>
-                  <a href="/#booking" className="inline-flex items-center rounded-xl bg-primary px-4 py-2 text-black font-semibold">
+                  <a href="https://camp-ourika.hotelrunner.com/bv3/search" className="inline-flex items-center rounded-xl bg-primary px-4 py-2 text-black font-semibold">
                     {t('roomsPage.book')}
                   </a>
                 </div>

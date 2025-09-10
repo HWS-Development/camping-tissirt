@@ -51,9 +51,31 @@ export default function Contact() {
             <div className="mt-6 h-px w-full bg-gradient-to-r from-transparent via-black/20 to-transparent"></div>
             <h3 className="mt-6 text-xl font-semibold">{t('contact.follow')}</h3>
             <div className="mt-3 flex items-center gap-3">
-              <a className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 hover:bg-black/5" href="#" aria-label="Instagram">📷</a>
-              <a className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 hover:bg-black/5" href="#" aria-label="Facebook">f</a>
-              <a className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 hover:bg-black/5" href="#" aria-label="X">𝕏</a>
+            <a
+  className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 hover:shadow-md hover:bg-black/5 transition"
+  href="https://www.instagram.com/ourikacampsuiteshotel/"
+  target="_blank"
+  rel="noreferrer"
+  aria-label="Instagram"
+>
+  <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+    <defs>
+      <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#f58529" />
+        <stop offset="40%" stopColor="#dd2a7b" />
+        <stop offset="70%" stopColor="#8134af" />
+        <stop offset="100%" stopColor="#515bd4" />
+      </linearGradient>
+    </defs>
+    {/* gradient rounded square */}
+    <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#igGradient)" />
+    {/* lens */}
+    <circle cx="12" cy="12" r="4.25" fill="none" stroke="#fff" strokeWidth="2" />
+    {/* small dot */}
+    <circle cx="17.2" cy="6.8" r="1.2" fill="#fff" />
+  </svg>
+</a>
+             
             </div>
           </div>
         </div>
