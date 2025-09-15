@@ -74,7 +74,7 @@ export default function RoomsPage() {
                 <h2 className="text-2xl font-semibold">{room.title}</h2>
                 <p className="mt-2 text-brand-black/70 flex-1">{room.desc}</p>
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="font-bold">{room.priceLabel}</span>
+               
                   <div className="flex gap-2">
                     <button
                       type="button"

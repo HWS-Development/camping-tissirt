@@ -9,30 +9,31 @@
       "ctaBook": "Book Your Stay",
       "ctaRooms": "Explore Rooms"
     },
-    "roomsPage": {
-      "title": "Our Rooms",
-      "intro": "Discover our selection of rooms and suites, each designed to reflect the charm of Marrakech with modern comfort.",
-      "book": "Book",
-      "pricePerNight": "{{price}} / night",
-      "items": {
-        "double": {
-          "title": "Standard Double Room",
-          "desc": "This spacious double room features air conditioning, a private entrance, and a private bathroom with a shower and hairdryer. The room offers soundproof walls, a wardrobe, tiled floors, heating, and a flat-screen TV. Includes 1 bed."
-        },
-        "familySuite": {
-          "title": "Family Suite",
-          "desc": "In the well-equipped kitchen, guests will find a stove, refrigerator, kitchenware, and a tea/coffee kettle. The spacious family living room offers air conditioning, a private entrance, a garden-view terrace, and a private bathroom with a shower. The apartment has 3 beds."
-        },
-        "juniorSuite": {
-          "title": "Junior Suite with Mountain View",
-          "desc": "Featuring a private entrance, this air-conditioned suite includes a living room, a separate bedroom, and a bathroom with a shower. Offering a garden-view terrace, it also has soundproof walls and a flat-screen TV. Includes 1 bed."
-        },
-        "triplePool": {
-          "title": "Triple Room with Pool View",
-          "desc": "This spacious triple room offers air conditioning, a private entrance, a pool-view balcony, and a private bathroom with a shower. Includes 2 beds."
-        }
-      }
+   "roomsPage": {
+  "title": "Our Rooms",
+  "intro": "Discover our selection of rooms and suites combining the charm of Marrakech with modern comfort. Each space has been designed to offer a warm and authentic atmosphere, while meeting the highest standards of comfort. Whether you're traveling as a couple, with family, or with friends, you'll find the ideal accommodation for an unforgettable stay in Marrakech.",
+  "book": "Book",
+  "pricePerNight": "{{price}} / night",
+  "items": {
+    "double": {
+      "title": "Double Room",
+      "desc": "Perfect for independent travelers or couples, our spacious Double Room combines comfort and elegance. It features air conditioning, a private entrance, a flat-screen TV, and a modern bathroom with a shower and hairdryer. Guests can choose between two double beds or one king-size bed for a restful night’s sleep."
     },
+    "triplePool": {
+      "title": "Triple Room",
+      "desc": "Ideal for friends or small families, the Triple Room accommodates up to three guests. It includes air conditioning, a private balcony with pool views, and a private bathroom with a shower. For added flexibility, choose between three separate beds or one king-size bed and one single bed."
+    },
+    "juniorSuite": {
+      "title": "Junior Suite",
+      "desc": "A true haven of relaxation, the Junior Suite offers a spacious terrace with sun loungers, table, and chairs—perfect for enjoying the sun and garden views. Inside, there’s a comfortable living area with armchairs, a spacious walk-in closet, and a separate bedroom. Soundproof walls and air conditioning ensure maximum comfort."
+    },
+    "familySuite": {
+      "title": "Family Suite",
+      "desc": "Designed for families or travelers seeking extra space, the Family Suite is perfect for extended stays. It features a welcoming living room, a fully equipped kitchen (stove, refrigerator, utensils, kettle), and a terrace overlooking the garden. With three beds, this suite combines independence, comfort, and a warm atmosphere."
+    }
+  }
+}
+,
     "roomsHome": {
         "heading": "Rooms & Suites",
         "sub": "Handcrafted details, calm courtyards, and crisp linens. Choose your perfect retreat.",
@@ -42,7 +43,7 @@
         "heading": "Guest Reviews",
         "sub": "Real impressions from our recent guests.",
         "items": [
-            { "name": "", "text": "Many thanks for the excellent Service to the hotel. I particularly appreciated the professionalism and kindness of M. Youssef and Abdellatif, which made my stay even more enjoyable. Bravo and keep going🥰." },
+            { "name": "", "text": "Many thanks for the excellent service at the hotel. I particularly appreciated the professionalism and kindness of the staff, which made my stay even more enjoyable. The spaciousness of the establishment is also a plus, offering comfort and freedom. Well done and all the best.🥰." },
             { "name": "", "text": "Excellent experience.I was there with friends a few weeks ago to rest, we were not disappointed!Warm and welcoming staff, quality and affordable food, large pool and more generally very charming hotel." },
             { "name": "", "text": "Very good atmosphere. Quality dishes and you can swim in peace in a beautiful pool listening to good music. To do with family or even friends. There are even activities for children (ping pong, basketball...)" }
         ]
@@ -66,7 +67,35 @@
     "At the gateway to the Ourika Valley and the Atlas Mountains — perfect for unforgettable getaways",
     "Spacious rooms combining modern comfort with authentic charm"
   ]
+},
+
+"haven": {
+  "heading": "Haven of Peace",
+  "intro": "🌟 Facilities & Amenities",
+  "cards": [
+    {
+      "icon": "🌊",
+      "title": "Leisure & Relaxation",
+      "body": "Two large swimming pools available year-round: enjoy swimming in every season, with sun loungers and daybeds for ultimate relaxation under the sun or in the shade.\n\nPlayground area: table tennis, basketball hoop, and trampoline to entertain both kids and adults."
+    },
+    {
+      "icon": "🏕️",
+      "title": "Authentic Spaces",
+      "body": "Traditional Caïdal tent: a unique venue to share convivial moments, gather with friends, or host private events in an authentic Moroccan atmosphere."
+    },
+    {
+      "icon": "🚗",
+      "title": "Comfort & Security",
+      "body": "Private and secured parking (60+ spaces): spacious, monitored parking to ensure peace of mind for all guests."
+    },
+    {
+      "icon": "🍴",
+      "title": "Culinary Experience",
+      "body": "À la carte restaurant: enjoy a varied international cuisine, combining local flavors and global dishes. Open for breakfast, lunch, and dinner in a warm, welcoming atmosphere."
+    }
+  ]
 }
+
 ,
     "contact": {
   "heading": "Get in Touch",

@@ -9,30 +9,31 @@
       "ctaBook": "Réserver votre séjour",
       "ctaRooms": "Découvrir les chambres"
     },
-    "roomsPage": {
-      "title": "Nos Chambres",
-      "intro": "Découvrez notre sélection de chambres et suites alliant charme de Marrakech et confort moderne.",
-      "book": "Réserver",
-      "pricePerNight": "{{price}} / nuit",
-      "items": {
-        "double": {
-          "title": "Chambre Double Standard",
-          "desc": "La spacieuse chambre double dispose de la climatisation, d'une entrée privée, ainsi que d'une salle de bain privative avec une douche et un sèche-cheveux. La chambre double offre des murs insonorisés, une armoire, un sol en carrelage, le chauffage et une télévision à écran plat. L'unité comprend 1 lit."
-        },
-        "familySuite": {
-          "title": "Suite Familiale",
-          "desc": "Dans la cuisine bien équipée, les invités trouveront une cuisinière, un réfrigérateur, des ustensiles de cuisine et une bouilloire à thé et café. Le spacieux salon familial offre la climatisation, une entrée privée, une terrasse avec vue sur le jardin ainsi qu'une salle de bains privative avec douche. L'appartement dispose de 3 lits."
-        },
-        "juniorSuite": {
-          "title": "Suite Junior Vue sur Montagne",
-          "desc": "Dotée d'une entrée privée, cette suite climatisée se compose d'un salon, d'une chambre séparée et d'une salle de bains avec douche. Offrant une terrasse avec vue sur le jardin, cette suite dispose également de murs insonorisés et d'une télévision à écran plat. L'unité propose 1 lit."
-        },
-        "triplePool": {
-          "title": "Chambre Triple Vue sur la Piscine",
-          "desc": "La spacieuse chambre triple offre la climatisation, une entrée privée, un balcon avec vue sur la piscine ainsi qu'une salle de bain privée avec une douche. L'unité dispose de 2 lits."
-        }
-      }
+   "roomsPage": {
+  "title": "Nos Chambres",
+  "intro": "Découvrez notre sélection de chambres et suites alliant charme de Marrakech et confort moderne. Chaque espace a été pensé pour offrir une atmosphère chaleureuse et authentique, tout en répondant aux standards de confort les plus élevés. Que vous voyagiez en couple, en famille ou entre amis, vous trouverez l’hébergement idéal pour un séjour inoubliable à Marrakech.",
+  "book": "Réserver",
+  "pricePerNight": "{{price}} / nuit",
+  "items": {
+    "double": {
+      "title": "Chambre Double",
+      "desc": "Idéale pour les voyageurs indépendants ou les couples, notre spacieuse Chambre Double allie confort et élégance. Elle dispose de la climatisation, d’une entrée privée, d’une télévision à écran plat et d’une salle de bains moderne avec douche et sèche-cheveux. Vous pouvez choisir entre deux lits doubles ou un grand lit double pour un sommeil paisible."
     },
+    "triplePool": {
+      "title": "Chambre Triple",
+      "desc": "Parfaite pour les séjours entre amis ou en famille, la Chambre Triple est conçue pour accueillir jusqu’à trois voyageurs. Elle offre la climatisation, un balcon avec vue sur la piscine, ainsi qu’une salle de bains privative avec douche. Pour plus de flexibilité, vous pouvez opter pour trois lits séparés ou pour un grand lit double et un lit simple."
+    },
+    "juniorSuite": {
+      "title": "Suite Junior",
+      "desc": "Un véritable cocon de détente, la Suite Junior séduit par sa grande terrasse équipée de transats, table et chaises – idéale pour profiter du soleil et de la vue sur le jardin. Elle comprend également un salon confortable avec fauteuils, un dressing spacieux (walk-in closet), ainsi qu’une chambre séparée. La climatisation et les murs insonorisés garantissent un confort optimal."
+    },
+    "familySuite": {
+      "title": "Suite Familiale",
+      "desc": "Pour les familles ou les voyageurs en quête d’espace, la Suite Familiale offre une grande superficie idéale pour des séjours prolongés. Elle dispose d’un salon convivial, d’une cuisine entièrement équipée (plaque de cuisson, réfrigérateur, ustensiles, bouilloire), et d’une terrasse avec vue sur le jardin. Avec ses trois lits, cette suite combine parfaitement confort, indépendance et atmosphère chaleureuse."
+    }
+  }
+}
+,
     "roomsHome": {
         "heading": "Chambres & Suites",
         "sub": "Détails artisanaux, patios paisibles et draps impeccables. Choisissez votre refuge idéal.",
@@ -42,7 +43,7 @@
         "heading": "Avis des clients",
         "sub": "Impressions authentiques de nos récents visiteurs.",
         "items": [
-            { "name": "", "text": "Un grand merci pour l'excellent service de l'hôtel. J'ai particulièrement apprécié le professionnalisme et la gentillesse de M. Youssef et Abdellatif, qui ont rendu mon séjour encore plus agréable. Bravo et bonne continuation.🥰." },
+            { "name": "", "text": "Un grand merci pour l'excellent service de l'hôtel. J'ai particulièrement apprécié le professionnalisme et la gentillesse du personnel, qui ont rendu mon séjour encore plus agréable. Le grand espace de l’établissement est également un atout, offrant confort et liberté. Bravo et bonne continuation.🥰." },
             { "name": "", "text": "Excellente expérience.J'y étais avec des amis il y a quelques semaines pour me reposer, et nous n'avons pas été déçus !Personnel chaleureux et accueillant, nourriture de qualité et abordable, grande piscine et, plus généralement, hôtel très charmant." },
             { "name": "", "text": "Très bonne ambiance. Plats de qualité et baignade paisible dans une belle piscine au son de la bonne musique. À faire en famille ou entre amis. Des activités sont même proposées aux enfants (ping-pong, basket-ball…)." }
         ]
@@ -66,7 +67,34 @@
     "Aux portes de la vallée de l’Ourika et de l’Atlas, idéal pour des escapades inoubliables",
     "Des chambres spacieuses, alliant confort moderne et charme authentique"
   ]
+},
+"haven": {
+  "heading": "Havre de Paix",
+  "intro": "🌟 Équipements & Installations",
+  "cards": [
+    {
+      "icon": "🌊",
+      "title": "Loisirs & Bien-être",
+      "body": "Deux grandes piscines disponibles toute l’année : profitez de la baignade en toute saison, avec transats et daybeds pour vous relaxer au soleil ou à l’ombre.\n\nEspace de jeux animé : ping-pong, panier de basket et trampoline pour divertir enfants et adultes."
+    },
+    {
+      "icon": "🏕️",
+      "title": "Espaces Authentiques",
+      "body": "Tente caïdale traditionnelle : un lieu unique pour partager des instants conviviaux, se retrouver entre amis ou organiser des événements privés dans une ambiance marocaine raffinée."
+    },
+    {
+      "icon": "🚗",
+      "title": "Confort & Sécurité",
+      "body": "Parking privé et sécurisé (60+ places) : un stationnement spacieux, gardé et accessible, offrant tranquillité d’esprit à nos visiteurs."
+    },
+    {
+      "icon": "🍴",
+      "title": "Expérience Culinaire",
+      "body": "Restaurant à la carte : savourez une cuisine internationale variée, alliant saveurs locales et plats internationaux. Disponible pour le petit-déjeuner, le déjeuner et le dîner, dans une atmosphère chaleureuse et conviviale."
+    }
+  ]
 }
+
 ,
 
     "contact": {

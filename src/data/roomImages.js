@@ -10,20 +10,19 @@ export const ROOM_IMAGES = {
     folder: 'chambreStandard',
     files: [
       
-      '9b04cdd3-38fb-4913-8104-173d2cb5d1e7.jpg',
-      '314ffdbc-2c84-45fb-89f4-ff603ada4a74.jpg',
-      '393c8f10-04b1-4de5-8dea-fb4807dfc264.jpg',
-      'e34fc386-d995-4b88-a4aa-d759bdef18ac.jpg'
+      'Screenshot 2025-09-15 160254.png',
+      'Screenshot 2025-09-15 160330.png',
+      'Screenshot 2025-09-15 160346.png',
+     
     ]
   },
   familySuite: {
     folder: 'suiteFamill', // <- folder name exactly as in your tree
     files: [
-      '2b544e45-02eb-4d3b-832a-504f6e5085a2.jpg',
-      '5f76a369-3890-4127-99d9-c195f3b29a8b.jpg',
-      '34c2da0e-81b1-427a-8255-f5dc4cfae356.jpg',
-      '75fb04ea-91a0-401b-a64e-9788d33f6929.jpg',
-      'fda7d68f-9278-4c8d-9330-da364cef9277.jpg'
+      'Screenshot 2025-09-15 160926.png',
+      'Screenshot 2025-09-15 160942.png',
+      'Screenshot 2025-09-15 160955.png',
+   
     ]
   },
   juniorSuite: {
@@ -37,10 +36,10 @@ export const ROOM_IMAGES = {
   triplePool: {
     folder: 'tripleRoom',
     files: [
-      '5ebe11c3-a891-42c5-ab80-e306299eadda.jpg',
-      '5ebe11c3-a891-42c5-ab80-e306299eadda.jpg',
-      '7f3300d4-6cde-4c08-838e-b63b7aa12aa4.jpg',
-      'c85f34d5-9996-45d4-a7a8-9ab174fc3a83.jpg',
+    
+      'Screenshot 2025-09-15 161322.png',
+      'Screenshot 2025-09-15 161339.png',
+      'Screenshot 2025-09-15 161354.png',
     
     ]
   }
