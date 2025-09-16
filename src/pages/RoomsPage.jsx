@@ -44,7 +44,7 @@ export default function RoomsPage() {
     <section className="pb-16 pt-48 bg-brand-desert/40 bg-pattern min-h-screen">
       <div className="max-w-6xl mx-auto px-4">
         <h1 className="text-4xl font-bold mb-6">{t('roomsPage.title')}</h1>
-        <p className="text-brand-black/70 max-w-2xl mb-12">{t('roomsPage.intro')}</p>
+        <p className="text-brand-black/70  mb-12">{t('roomsPage.intro')}</p>
 
         <div className="grid gap-8 md:grid-cols-2">
           {rooms.map((room) => (
@@ -72,7 +72,11 @@ export default function RoomsPage() {
 
               <div className="p-6 flex flex-col flex-1">
                 <h2 className="text-2xl font-semibold">{room.title}</h2>
-                <p className="mt-2 text-brand-black/70 flex-1">{room.desc}</p>
+                <p className="mt-2 text-brand-black/70 flex-1 text-left leading-relaxed hyphens-auto">
+  {room.desc}
+</p>
+
+
                 <div className="mt-4 flex items-center justify-between">
                
                   <div className="flex gap-2">

@@ -69,8 +69,8 @@
   ]
 },
 "haven": {
-  "heading": "Havre de Paix",
-  "intro": "🌟 Équipements & Installations",
+  "heading": "Équipements et Installations ",
+  "intro": "🌟Entre loisirs et tradition, en solo ou en famille, pour un court séjour ou une longue escapade, Ourika Camp vous accueille dans un cadre unique pour profiter pleinement du beau temps et de l’art de vivre à Marrakech.",
   "cards": [
     {
       "icon": "🌊",
@@ -100,7 +100,9 @@
     "contact": {
       "heading": "Contactez-nous",
       "sub": "Questions, réservations de groupe ou demandes spéciales — nous sommes là pour vous aider.",
-      "form": { "name": "Nom", "email": "E-mail", "message": "Message", "send": "Envoyer", "thanks": "Merci ! Nous vous répondrons rapidement." },
+      "form": { "name": "Nom", "email": "E-mail", "message": "Message", "send": "Envoyer", "thanks": "Merci ! Nous vous répondronsau plus vite.", "phoneOpt": "Numéro de téléphone (facultatif)",
+      "phoneHint": "Optionnel — si vous préférez être contacté·e par téléphone.",
+      "phoneTitle": "Entrez un numéro de téléphone valide." },
       "direct": { "heading": "Contacts directs",  "phone": "📞 +212 648-489748", "email": "✉️ ourikacamp@outlook.com", "address": "📍 Marrakech, Morocco"},
       "follow": "Suivre"
     },

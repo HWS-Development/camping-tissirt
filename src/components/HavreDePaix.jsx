@@ -7,7 +7,7 @@ export default function HavreDePaix() {
   return (
     <section id="haven" className="py-16 bg-brand-desert/40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="">
           <h2 className="text-3xl sm:text-4xl font-bold">{t('haven.heading')}</h2>
           <p className="mt-2 text-brand-black/70">{t('haven.intro')}</p>
         </div>

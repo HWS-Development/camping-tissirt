@@ -70,8 +70,8 @@
 },
 
 "haven": {
-  "heading": "Haven of Peace",
-  "intro": "🌟 Facilities & Amenities",
+  "heading": "Facilities & Amenities",
+  "intro": "🌟  Blending leisure and tradition, whether solo or with family, for a short getaway or a longer stay, Ourika Camp offers a unique setting to enjoy Marrakech’s sunshine and authentic way of life.",
   "cards": [
     {
       "icon": "🌊",
@@ -100,7 +100,9 @@
     "contact": {
   "heading": "Get in Touch",
   "sub": "Questions, group bookings, or special requests—we're happy to help.",
-  "form": { "name": "Name", "email": "Email", "message": "Message", "send": "Send", "thanks": "Thanks! We'll get back to you shortly." },
+  "form": { "name": "Name", "email": "Email", "message": "Message", "send": "Send", "thanks": "Thanks! We'll get back to you shortly." , "phoneOpt": "Phone number (optional)",
+  "phoneHint": "Optional — if you'd like to be contacted by phone.",
+  "phoneTitle": "Enter a valid phone number."},
   "direct": {
     "heading": "Direct Contacts",
     "phone": "📞 +212 648-489748",

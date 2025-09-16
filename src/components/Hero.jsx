@@ -129,15 +129,20 @@ export default function Hero() {
 
       {/* Text + CTAs */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
-        <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm tracking-wide">
-          {t('home.welcome', { city: t('home.city') })}
-        </span>
-        <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-          {t('home.headline')}
-        </h1>
-        <p className="mt-4 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
-          {t('home.subtitle')}
-        </p>
+      <div className="flex flex-col items-center text-center gap-4 sm:gap-6">
+  <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm tracking-wide">
+    {t('home.welcome', { city: t('home.city') })}
+  </span>
+
+  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+    {t('home.headline')}
+  </h1>
+
+  <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm tracking-wide">
+    {t('home.subtitle')}
+  </p>
+</div>
+
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
             href="#booking"
