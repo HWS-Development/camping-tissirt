@@ -1,5 +1,5 @@
 {
-    "brand": "Ourika Camp",
+    "brand": "Ourika Camp ",
     "nav": { "home": "Accueil", "rooms": "Chambres", "reviews": "Avis", "gallery": "Galerie", "location": "Emplacement", "contact": "Contact", "book": "Réserver" },
     "home": {
       "welcome": "Bienvenue à {{city}}",
@@ -29,7 +29,7 @@
     },
     "familySuite": {
       "title": "Suite Familiale",
-      "desc": "Pour les familles ou les voyageurs en quête d’espace, la Suite Familiale offre une grande superficie idéale pour des séjours prolongés. Elle dispose d’un salon convivial, d’une cuisine entièrement équipée (plaque de cuisson, réfrigérateur, ustensiles, bouilloire), et d’une terrasse avec vue sur le jardin. Avec ses trois lits, cette suite combine parfaitement confort, indépendance et atmosphère chaleureuse."
+      "desc": "Pour les familles ou les voyageurs en quête d’espace, la Suite Familiale offre une grande superficie idéale pour des séjours prolongés. Elle dispose d’un salon convivial, d’une cuisine entièrement équipée (plaque de cuisson, réfrigérateur, ustensiles, bouilloire), et d’une terrasse avec vue sur le jardin.cette suite combine parfaitement confort, indépendance et atmosphère chaleureuse."
     }
   }
 }
@@ -43,7 +43,7 @@
         "heading": "Avis des clients",
         "sub": "Impressions authentiques de nos récents visiteurs.",
         "items": [
-            { "name": "", "text": "Un grand merci pour l'excellent service de l'hôtel. J'ai particulièrement apprécié le professionnalisme et la gentillesse du personnel, qui ont rendu mon séjour encore plus agréable. Le grand espace de l’établissement est également un atout, offrant confort et liberté. Bravo et bonne continuation.🥰." },
+            { "name": "", "text": "Un grand merci pour l'excellent service de l'hôtel. J'ai particulièrement apprécié le professionnalisme et la gentillesse du personnel, qui ont rendu mon séjour encore plus agréable. Le grand espace de l’établissement est également un atout, offrant confort et liberté. Bravo et bonne continuation." },
             { "name": "", "text": "Excellente expérience.J'y étais avec des amis il y a quelques semaines pour me reposer, et nous n'avons pas été déçus !Personnel chaleureux et accueillant, nourriture de qualité et abordable, grande piscine et, plus généralement, hôtel très charmant." },
             { "name": "", "text": "Très bonne ambiance. Plats de qualité et baignade paisible dans une belle piscine au son de la bonne musique. À faire en famille ou entre amis. Des activités sont même proposées aux enfants (ping-pong, basket-ball…)." }
         ]

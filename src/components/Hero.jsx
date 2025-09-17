@@ -138,10 +138,16 @@ export default function Hero() {
     {t('home.headline')}
   </h1>
 
-  <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm tracking-wide">
+  {/* New subheadline */}
+  <p className="text-lg sm:text-xl font-medium text-white/90 tracking-wide">
+    Suites Hotel &amp; Resort
+  </p>
+
+  <p className="inline-flex items-center gap-2 rounded-full bg-white/30 text-white px-4 py-1 text-sm tracking-wide backdrop-blur-sm ring-1 ring-white/30">
     {t('home.subtitle')}
   </p>
 </div>
+
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a

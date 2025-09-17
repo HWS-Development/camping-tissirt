@@ -1,5 +1,5 @@
 {
-    "brand": "Ourika Camp",
+    "brand": "Ourika Camp Suites Hotel & Resort",
     "nav": { "home": "Home", "rooms": "Rooms", "reviews": "Reviews", "gallery": "Gallery", "location": "Location", "contact": "Contact", "book": "Book Now" },
     "home": {
       "welcome": "Welcome to {{city}}",
@@ -29,7 +29,7 @@
     },
     "familySuite": {
       "title": "Family Suite",
-      "desc": "Designed for families or travelers seeking extra space, the Family Suite is perfect for extended stays. It features a welcoming living room, a fully equipped kitchen (stove, refrigerator, utensils, kettle), and a terrace overlooking the garden. With three beds, this suite combines independence, comfort, and a warm atmosphere."
+      "desc": "Designed for families or travelers seeking extra space, the Family Suite is perfect for extended stays. It features a welcoming living room, a fully equipped kitchen (stove, refrigerator, utensils, kettle), and a terrace overlooking the garden. this suite combines independence, comfort, and a warm atmosphere."
     }
   }
 }
@@ -43,7 +43,7 @@
         "heading": "Guest Reviews",
         "sub": "Real impressions from our recent guests.",
         "items": [
-            { "name": "", "text": "Many thanks for the excellent service at the hotel. I particularly appreciated the professionalism and kindness of the staff, which made my stay even more enjoyable. The spaciousness of the establishment is also a plus, offering comfort and freedom. Well done and all the best.🥰." },
+            { "name": "", "text": "Many thanks for the excellent service at the hotel. I particularly appreciated the professionalism and kindness of the staff, which made my stay even more enjoyable. The spaciousness of the establishment is also a plus, offering comfort and freedom. Well done and all the best." },
             { "name": "", "text": "Excellent experience.I was there with friends a few weeks ago to rest, we were not disappointed!Warm and welcoming staff, quality and affordable food, large pool and more generally very charming hotel." },
             { "name": "", "text": "Very good atmosphere. Quality dishes and you can swim in peace in a beautiful pool listening to good music. To do with family or even friends. There are even activities for children (ping pong, basketball...)" }
         ]

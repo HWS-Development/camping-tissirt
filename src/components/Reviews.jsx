@@ -13,19 +13,19 @@ export default function Reviews() {
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((r, i) => (
-            <article key={i} className="rounded-2xl border border-black/10 bg-white p-6 shadow-soft">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-brand-orange text-lg">★</span>
-                <div>
-                  <h3 className="font-semibold">{r.name}</h3>
-                  <div className="text-xs text-brand-black/60">★★★★★</div>
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-brand-black/80">{r.text}</p>
-            </article>
-          ))}
-        </div>
+  {reviews.map((r, i) => (
+    <article key={i} className="rounded-2xl border border-black/10 bg-white p-6 shadow-soft">
+      <div className="flex items-center gap-2">
+        {/* Stars now flow like text (no fixed 40px box) */}
+        <span className="text-amber-500 text-base leading-none" aria-hidden>★★★★★</span>
+        {r.name && <h3 className="font-semibold">{r.name}</h3>}
+      </div>
+
+      <p className="mt-3 text-sm text-brand-black/80">{r.text}</p>
+    </article>
+  ))}
+</div>
+
       </div>
     </section>
   )
