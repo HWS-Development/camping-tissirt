@@ -17,7 +17,7 @@
   "items": {
     "double": {
       "title": "Chambre Double",
-      "desc": "Idéale pour les voyageurs indépendants ou les couples, notre spacieuse Chambre Double allie confort et élégance. Elle dispose de la climatisation, d’une entrée privée, d’une télévision à écran plat et d’une salle de bains moderne avec douche et sèche-cheveux. Vous pouvez choisir entre deux lits doubles ou un grand lit double pour un sommeil paisible."
+      "desc": "Idéale pour les voyageurs indépendants ou les couples, notre spacieuse Chambre Double allie confort et élégance. Elle dispose de la climatisation, d’une entrée privée, d’une télévision à écran plat et d’une salle de bains moderne avec douche et sèche-cheveux. Vous pouvez choisir deux lits simples ou un grand lit double pour un sommeil paisible."
     },
     "triplePool": {
       "title": "Chambre Triple",
@@ -29,7 +29,7 @@
     },
     "familySuite": {
       "title": "Suite Familiale",
-      "desc": "Pour les familles ou les voyageurs en quête d’espace, la Suite Familiale offre une grande superficie idéale pour des séjours prolongés. Elle dispose d’un salon convivial, d’une cuisine entièrement équipée (plaque de cuisson, réfrigérateur, ustensiles, bouilloire), et d’une terrasse avec vue sur le jardin.cette suite combine parfaitement confort, indépendance et atmosphère chaleureuse."
+      "desc": "Pour les familles ou les voyageurs en quête d’espace, la Suite Familiale offre une grande superficie idéale pour des séjours prolongés. Elle dispose d’un salon convivial, d’une cuisine entièrement équipée (plaque de cuisson, réfrigérateur, ustensiles, bouilloire), et d’une terrasse avec vue sur le jardin.Cette suite combine parfaitement confort, indépendance et atmosphère chaleureuse."
     }
   }
 }

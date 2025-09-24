@@ -19,9 +19,10 @@ export const ROOM_IMAGES = {
   familySuite: {
     folder: 'suiteFamill', // <- folder name exactly as in your tree
     files: [
+      'Screenshot 2025-09-15 160955.png',
       'Screenshot 2025-09-15 160926.png',
       'Screenshot 2025-09-15 160942.png',
-      'Screenshot 2025-09-15 160955.png',
+      
    
     ]
   },

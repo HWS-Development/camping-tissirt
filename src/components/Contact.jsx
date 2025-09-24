@@ -1,32 +1,90 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
   const { t } = useTranslation()
-  const [sent, setSent] = useState(false)
 
-  const onSubmit = (e) => {
+  const [form, setForm] = useState({
+    from_name: '',
+    from_email: '',
+    phone: '',
+    message: '',
+    honey: '' // spam honeypot (must stay empty)
+  })
+  const [status, setStatus] = useState({ sending: false, ok: false, err: '' })
+
+  const onChange = (e) => {
+    const { name, value } = e.target
+    setForm((f) => ({ ...f, [name]: value }))
+  }
+
+  const onSubmit = async (e) => {
     e.preventDefault()
-    setSent(true)
+    if (status.sending) return
+    if (form.honey) return // bot caught
+
+    try {
+      setStatus({ sending: true, ok: false, err: '' })
+
+      const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID
+      const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
+      const PUBLIC_KEY  = process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+
+      // Map EXACTLY to your EmailJS template variables
+      const templateParams = {
+        to_email:   'ourikacamp@outlook.com',
+        from_name:  form.from_name,
+        from_email: form.from_email,
+        phone:      form.phone || '—',
+        message:    form.message
+      }
+
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, { publicKey: PUBLIC_KEY })
+
+      setStatus({ sending: false, ok: true, err: '' })
+      setForm({ from_name: '', from_email: '', phone: '', message: '', honey: '' })
+    } catch (err) {
+      setStatus({
+        sending: false,
+        ok: false,
+        err: t('contact.form.error', 'Une erreur est survenue. Veuillez réessayer.')
+      })
+    }
   }
 
   return (
     <section id="contact" className="py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left: Form */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold">{t('contact.heading')}</h2>
             <p className="mt-2 text-brand-black/70">{t('contact.sub')}</p>
 
             <div className="mt-6 rounded-2xl bg-white p-6 shadow-soft border border-black/10">
-              <form onSubmit={onSubmit} className="grid sm:grid-cols-2 gap-4">
+              <form onSubmit={onSubmit} className="grid sm:grid-cols-2 gap-4" noValidate>
+                {/* Honeypot (hidden) */}
+                <input
+                  type="text"
+                  name="honey"
+                  value={form.honey}
+                  onChange={onChange}
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 <div className="sm:col-span-1">
                   <label className="block text-sm font-medium text-brand-black/80">
                     {t('contact.form.name')}
                   </label>
                   <input
+                    name="from_name"
                     type="text"
                     required
+                    value={form.from_name}
+                    onChange={onChange}
                     className="mt-1 w-full rounded-xl border border-black/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-orange"
                   />
                 </div>
@@ -36,24 +94,30 @@ export default function Contact() {
                     {t('contact.form.email')}
                   </label>
                   <input
+                    name="from_email"
                     type="email"
                     required
+                    value={form.from_email}
+                    onChange={onChange}
                     className="mt-1 w-full rounded-xl border border-black/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-orange"
                   />
                 </div>
 
-                {/* ✅ Optional phone number */}
+                {/* Optional phone */}
                 <div className="sm:col-span-2">
                   <label className="block text-sm font-medium text-brand-black/80">
                     {t('contact.form.phoneOpt', 'Numéro de téléphone (facultatif)')}
                   </label>
                   <input
+                    name="phone"
                     type="tel"
                     inputMode="tel"
                     autoComplete="tel"
                     placeholder="+212 6 12 34 56 78"
-                    pattern="^\+?[0-9\s().-]{6,}$"
+                    pattern="^\\+?[0-9\\s().-]{6,}$"
                     title={t('contact.form.phoneTitle', 'Entrez un numéro de téléphone valide.')}
+                    value={form.phone}
+                    onChange={onChange}
                     className="mt-1 w-full rounded-xl border border-black/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-orange"
                   />
                   <p className="mt-1 text-xs text-brand-black/60">
@@ -66,27 +130,40 @@ export default function Contact() {
                     {t('contact.form.message')}
                   </label>
                   <textarea
+                    name="message"
                     rows="5"
                     required
+                    value={form.message}
+                    onChange={onChange}
                     className="mt-1 w-full rounded-xl border border-black/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-orange"
                   />
                 </div>
 
                 <div className="sm:col-span-2">
-                  <button className="w-full inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-black shadow-soft">
-                    {t('contact.form.send')}
+                  <button
+                    disabled={status.sending}
+                    className="w-full inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-black shadow-soft disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {status.sending ? t('contact.form.sending', 'Envoi…') : t('contact.form.send')}
                   </button>
                 </div>
+
+                {/* Status messages */}
+                {status.ok && (
+                  <p className="sm:col-span-2 text-sm text-emerald-700 mt-1">
+                    {t('contact.form.thanks')}
+                  </p>
+                )}
+                {status.err && (
+                  <p className="sm:col-span-2 text-sm text-red-600 mt-1">
+                    {status.err}
+                  </p>
+                )}
               </form>
             </div>
-
-            {sent && (
-              <p className="mt-3 text-sm text-brand-black/70">
-                {t('contact.form.thanks')}
-              </p>
-            )}
           </div>
 
+          {/* Right: Direct contacts + social (kept exactly as you wanted) */}
           <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-soft">
             <h3 className="text-xl font-semibold">{t('contact.direct.heading')}</h3>
             <ul className="mt-4 space-y-3 text-brand-black/80">
@@ -122,6 +199,7 @@ export default function Contact() {
               </a>
             </div>
           </div>
+          {/* /Right */}
         </div>
       </div>
     </section>

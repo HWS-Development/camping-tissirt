@@ -6,12 +6,10 @@ export default function GalleryPage() {
 
   // List your image filenames here (inside /public/gallery/)
   const files = [
-    '0aae7b19-7564-4a0b-8951-69f61f112923.jpg','1d02a86b-5294-4108-8957-7799f2dfa0cf.jpg','1d5c777b-64a8-4b8e-a0df-7db0639bdc11.jpg','Screenshot 2025-09-15 160955.png',
-    '53c21403-64f3-4343-b059-8f14f04f2756.jpg','8e76de73-a983-4e1c-87d9-e3e3e1d8a70e.jpg','2025-06-11 (5).jpg','94c414dd-2859-4cd6-b3d6-cff950e8d91a.jpg',
-    'Screenshot 2025-09-15 160942.png','2025-06-11 (10).jpg','2025-06-11 (13).jpg','2025-06-11 (21).jpg',
-    'Screenshot 2025-09-15 160254.png','705690381.jpg','7535c6be-f515-4a02-9b19-111ca6985f55.jpg','2025-06-12.jpg',
-    '705691703.jpg','705691707.jpg','a3ef54e3-7d5e-45ba-90d6-35e1c373489a.jpg','restaurant (1).jpg',
-    // add more...
+    '0aae7b19-7564-4a0b-8951-69f61f112923.jpg','1d5c777b-64a8-4b8e-a0df-7db0639bdc11.jpg','Screenshot 2025-09-15 160955.png',"Screenshot 2025-09-24 164429.png","Screenshot 2025-09-24 164537.png"
+    ,'94c414dd-2859-4cd6-b3d6-cff950e8d91a.jpg',"Screenshot 2025-09-24 164510.png",'Screenshot 2025-09-15 160942.png','2025-06-11 (21).jpg',"Screenshot 2025-09-15 160254.png"
+   ,'705690381.jpg',"Screenshot 2025-09-15 160942.png",'7535c6be-f515-4a02-9b19-111ca6985f55.jpg','2025-06-12.jpg','a3ef54e3-7d5e-45ba-90d6-35e1c373489a.jpg',"Screenshot 2025-09-24 164306.png","Screenshot 2025-09-24 164450.png",
+    "Screenshot 2025-09-15 160955.png","Screenshot 2025-09-24 164100.png","Screenshot 2025-09-24 164129.png","Screenshot 2025-09-24 164153.png","Screenshot 2025-09-24 164230.png","Screenshot 2025-09-24 164554.png","Screenshot 2025-09-24 164343.png"
   ];
 
   const images = files.map((f) => `/images/tout/${f}`);
