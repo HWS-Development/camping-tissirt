@@ -12,7 +12,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      BUILD_DIR: ${{ secrets.BUILD_DIR }}      # set to "build"
+      BUILD_DIR: ${{ secrets.BUILD_DIR }}      # set secret to: build
       SERVER_DIR: ${{ secrets.SERVER_DIR }}    # /home/u877729207/domains/mediumslateblue-hedgehog-415779.hostingersite.com/public_html/
 
     steps:
@@ -37,7 +37,7 @@ jobs:
           test -f "$BUILD_DIR/index.html"
 
       - name: FTP Deploy (FTPS)
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5   # <-- correct repo + version
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
