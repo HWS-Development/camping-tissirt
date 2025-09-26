@@ -43,13 +43,13 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ftp.mediumslateblue-hedgehog-415779.hostingersite.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
           port: 21
+          protocol: ftp   # not ftps (Hostinger FTP is plain by default)
           local-dir: build/
-          server-dir: ${{ env.SERVER_DIR }}
+          server-dir: /home/u877729207/domains/mediumslateblue-hedgehog-415779.hostingersite.com/public_html/
           exclude: |
             **/.git*
             **/.github/**
