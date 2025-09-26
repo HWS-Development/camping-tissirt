@@ -1,0 +1,60 @@
+name: Build & FTP Deploy to Hostinger (CRA)
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      BUILD_DIR: ${{ secrets.BUILD_DIR }}      # "build" for CRA
+      SERVER_DIR: ${{ secrets.SERVER_DIR }}    # absolute path to live folder on Hostinger
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build (CRA)
+        run: npm run build
+
+      - name: Sanity check build output
+        run: |
+          echo "Listing $BUILD_DIR"
+          ls -la "$BUILD_DIR"
+          test -f "$BUILD_DIR/index.html"
+
+      - name: FTP Deploy (FTPS explicit TLS)
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ${{ env.BUILD_DIR }}     # upload built files only
+          server-dir: ${{ env.SERVER_DIR }}   # Hostinger doc root for this domain
+          # keep remote files that still exist locally, clean only stale ones if you want:
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/src/**
+            **/*.md
+            **/package*.json
+            **/.env*
