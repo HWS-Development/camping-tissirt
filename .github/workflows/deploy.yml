@@ -1,4 +1,4 @@
-name: Build & SFTP Deploy (test with inline key)
+name: Build & SFTP Deploy (with password)
 
 on:
   push:
@@ -33,6 +33,6 @@ jobs:
           port: 65002
           username: u877729207
           password: Hospitality@2025
-          local_path: build/*
+          local_path: build/
           remote_path: /home/u877729207/domains/mediumslateblue-hedgehog-415779.hostingersite.com/public_html/
           sftp_only: true
