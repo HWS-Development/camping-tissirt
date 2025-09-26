@@ -18,6 +18,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
+      - name: Build (CRA)
+        run: CI=false npm run build
 
       - name: Use Node 20
         uses: actions/setup-node@v4
