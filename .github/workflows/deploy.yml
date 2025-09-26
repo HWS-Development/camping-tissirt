@@ -1,4 +1,4 @@
-name: Build & FTP Deploy to Hostinger (CRA)
+name: Build & FTP Deploy (CRA, npm)
 
 on:
   push:
@@ -12,35 +12,36 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      BUILD_DIR: ${{ secrets.BUILD_DIR }}      # set secret to: build
-      SERVER_DIR: ${{ secrets.SERVER_DIR }}    # /home/u877729207/domains/mediumslateblue-hedgehog-415779.hostingersite.com/public_html/
+      BUILD_DIR: ${{ secrets.BUILD_DIR }}      # "build"
+      SERVER_DIR: ${{ secrets.SERVER_DIR }}    # your /home/.../public_html/
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        
-      - name: Build (CRA)
-        run: CI=false npm run build
+      - uses: actions/checkout@v4
 
-      - name: Use Node 20
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18            # CRA 5 works great on Node 18
           cache: 'npm'
 
-      - name: Install deps
+      - name: Show lockfiles (sanity)
+        run: ls -la
+
+      - name: Install deps (npm ci needs package-lock.json)
         run: npm ci
 
+      - name: Print scripts (sanity)
+        run: cat package.json
+
       - name: Build (CRA)
-        run: npm run build
+        run: CI=false npm run build
 
       - name: Verify build output
         run: |
           ls -la "$BUILD_DIR"
           test -f "$BUILD_DIR/index.html"
 
-      - name: FTP Deploy (FTPS)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5   # <-- correct repo + version
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
