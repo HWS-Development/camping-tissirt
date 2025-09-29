@@ -31,12 +31,47 @@ export default function Booking() {
   }, [nights, checkin, checkout, t])
 
   const onSearch = (e) => {
-    e.preventDefault()
-    if (nights <= 0) return
-    const url = `https://camp-ourika.hotelrunner.com/bv3/search?search=%7B%22checkin_date%22:%22${checkin}%22,%22checkout_date%22:%22${checkout}%22,%22day_count%22:${nights},%22coupon_code%22:${promo},%22total_adult%22:${guests.split(' ')[0]},%22total_child%22:0,%22rooms%22:%5B%7B%22adult_count%22:${guests.split(' ')[0]},%22guest_count%22:${guests.split(' ')[0]},%22child_count%22:0,%22child_ages%22:%5B%5D%7D%5D,%22guest_rooms%22:%7B%220%22:%7B%22adult_count%22:${guests.split(' ')[0]},%22guest_count%22:${guests.split(' ')[0]}`
-    window.open(url, '_blank')
-    // window.location.href = url
-  }
+    e.preventDefault();
+    if (nights <= 0) return;
+  
+    // Extract first number from the guests label (handles EN/FR text)
+    const adults = (() => {
+      const m = (guests || '').match(/\d+/);
+      return m ? parseInt(m[0], 10) : 2;
+    })();
+  
+    // Build the HotelRunner payload
+    const payload = {
+      checkin_date:  checkin,          // "YYYY-MM-DD"
+      checkout_date: checkout,         // "YYYY-MM-DD"
+      day_count:     nights,           // int
+      coupon_code:   promo?.trim() || "", // empty string if none
+      total_adult:   adults,
+      total_child:   0,
+      rooms: [
+        {
+          adult_count: adults,
+          guest_count: adults,
+          child_count: 0,
+          child_ages: []
+        }
+      ],
+      guest_rooms: {
+        "0": {
+          adult_count: adults,
+          guest_count: adults,
+          child_count: 0
+        }
+      }
+    };
+  
+    const base = "https://camp-ourika.hotelrunner.com/bv3/search";
+    const url = `${base}?search=${encodeURIComponent(JSON.stringify(payload))}`;
+  
+    window.open(url, "_blank");
+    // or: window.location.href = url;
+  };
+  
 
   const todayStr = new Date().toISOString().slice(0, 10)
   const guestOptions = t('booking.guestsOptions', { returnObjects: true })
