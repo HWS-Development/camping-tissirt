@@ -31,7 +31,7 @@ export default function Booking() {
   }, [nights, checkin, checkout, t])
 
   const onSearch = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     if (nights <= 0) return;
   
     // Extract first number from the guests label (handles EN/FR text)
