@@ -128,38 +128,62 @@
       "counter": "{{current}} / {{total}}",
       "alt": "Gallery image {{n}}"
     },
-    "conditions": {
-  "title": "Terms and Conditions",
-  "updated": "Last updated: October 10, 2025",
-  "articles": {
-    "1": {
-      "title": "Article 1 - Purpose",
-      "text": "These terms and conditions govern the sales by the company Rent-Here of service provisions in the field of tourism and hospitality."
-    },
-    "2": {
-      "title": "Article 2 - Prices",
-      "text": "Rates apply per room and per night, include VAT, breakfast (if applicable), and free Wi-Fi. Local taxes are not included and will be added upon payment."
-    },
-    "3": {
-      "title": "Article 3 - Local Taxes",
-      "text": "Tourism Promotion Tax (ONMT): 11 MAD per person per night. Municipal Tax: 15 MAD per person per night (for guests over 12 years old)."
-    },
-    "4": {
-      "title": "Article 4 - Cancellations",
-      "text": "Non-refundable rates cannot be cancelled or modified. Flexible rates (7 days): free cancellation up to 7 days before arrival."
-    },
-    "5": {
-      "title": "Article 5 - Payment",
-      "text": "Payment is made securely by credit card via PAYZONE. Accepted cards: Visa and Mastercard."
-    },
-    "6": {
-      "title": "Article 6 – Independent Travellers",
-      "text": "A valid passport is required for all travellers. Some nationalities may require a visa. Proof of marriage may be required for Moroccan or Muslim couples."
+
+    
+  "legal": {
+    "title": "Terms and Conditions",
+    "updated": "October 10, 2025",
+    "sections": [
+      {
+        "h": "Article 1 - Purpose",
+        "p": "These terms and conditions govern the sales by the company Rent-Here of service provisions in the field of tourism and hospitality."
+      },
+      {
+        "h": "Article 2 - Prices",
+        "p": "Rates apply to the number of guests specified on the room page, per night, and include applicable VAT, breakfast (where applicable), and free Wi-Fi access. Local taxes (tourist tax) are not included and will be added at payment. Rates may be displayed in several currencies for reference; billing is made exclusively in Moroccan dirhams (MAD). If another currency is shown or used, the exchange rate applied is the one in effect at the time of transaction, according to the official rate set by the bank or payment provider."
+      },
+      {
+        "h": "Article 3 – Local Taxes",
+        "p": "In addition to the room rate, guests must pay the following local taxes (per person, per night, unless otherwise specified for children under local regulations):",
+        "bullets": [
+          "Tourism Promotion Tax (TPT) — paid to ONMT: 11 MAD per person, per night.",
+          "Municipal / City Tax — paid to the Municipality of Marrakech: 15 MAD per person, per night (for guests over 12 years old)."
+        ],
+        "note": "These taxes will be added to the final invoice at payment. They are collected by the property and remitted to the competent authorities (Municipality of Marrakech and ONMT)."
+      },
+      {
+        "h": "Article 4 - Cancellations",
+        "p": "Non-Refundable Rates: no cancellation, modification, or refund for any reason. In case of cancellation, modification, or no-show, the full stay is charged. Flexible Rates (7 days): free cancellation up to 7 days before arrival. If cancelled later or in case of no-show, the total amount of the reservation is charged. Any change is subject to availability and written confirmation from the property."
+      },
+      {
+        "h": "Article 5 - Payment",
+        "p": "Confirming your booking implies an obligation to pay the indicated price. Payment is made by credit card through the secure PAYZONE system. Accepted cards: Visa and Mastercard. The card is charged at the time of booking."
+      },
+      {
+        "h": "Article 6 – Independent Travellers",
+        "p": "A valid passport is required for all travellers, including children. The maximum duration of a tourist stay is three months. Some nationalities may require a visa—please check with the Moroccan consulate/embassy before departure. Under Moroccan law, proof of marriage may be required for couples of Moroccan nationality or nationals of Muslim countries wishing to stay in the same room."
+      }
+    ],
+    "company": {
+      "title": "General Information",
+      "lines": [
+        "Company name: RENT-HERE",
+        "Registered office: 6, Rue Dayet Aoua, 4th Floor, Apt. 16, Agdal – Rabat",
+        "Legal form: SARL",
+        "RC: 172493",
+        "IF: 60233734",
+        "TP: 25743022",
+        "ICE: 00344246900095",
+        "Email: hotel@ourikacamp.com",
+        "Phone: +212 648 489 748",
+        "General Terms and Conditions of Sale for services sold on www.ourikacamp.com",
+        "Last updated: October 10, 2025"
+      ]
     }
   }
 }
 
 
 
-  }
+  
   

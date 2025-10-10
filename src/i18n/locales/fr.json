@@ -122,33 +122,55 @@
       "counter": "{{current}} / {{total}}",
       "alt": "Image de la galerie {{n}}"
     },
-    "conditions": {
-  "title": "Conditions Générales de Vente",
-  "updated": "Dernière mise à jour : 10 octobre 2025",
-  "articles": {
-    "1": {
-      "title": "Article 1 - Objet",
-      "text": "Les présentes conditions régissent les ventes par la société Rent-Here de prestations de services dans un cadre de tourisme et d’hospitalité."
-    },
-    "2": {
-      "title": "Article 2 - Prix",
-      "text": "Les tarifs indiqués s’entendent pour le nombre de personnes spécifié sur la page de la chambre, par nuit, et incluent la TVA applicable..."
-    },
-    "3": {
-      "title": "Article 3 - Taxes Locales",
-      "text": "Taxe de Promotion Touristique (ONMT): 11 MAD par personne et par nuit. Taxe Communale: 15 MAD par personne et par nuit (pour les voyageurs de plus de 12 ans)."
-    },
-    "4": {
-      "title": "Article 4 - Annulations",
-      "text": "Tarifs non remboursables: aucun remboursement possible. Tarifs flexibles (7 jours): annulation gratuite jusqu’à 7 jours avant la date d’arrivée."
-    },
-    "5": {
-      "title": "Article 5 - Paiement",
-      "text": "Le paiement s’effectue par carte bancaire via le système sécurisé PAYZONE. Les cartes acceptées sont Visa et Mastercard."
-    },
-    "6": {
-      "title": "Article 6 – Voyageurs Indépendants",
-      "text": "Un passeport en cours de validité est requis pour tous les voyageurs. Certaines nationalités nécessitent un visa."
+  "legal": {
+    "title": "Conditions Générales de Vente",
+    "updated": "10 octobre 2025",
+    "sections": [
+      {
+        "h": "Article 1 - Objet",
+        "p": "Les présentes conditions régissent les ventes par la société Rent-Here de prestations de services dans un cadre de tourisme et d’hospitalité."
+      },
+      {
+        "h": "Article 2 - Prix",
+        "p": "Les tarifs indiqués s’entendent pour le nombre de personnes spécifié sur la page de la chambre, par nuit, et incluent la TVA applicable, le petit-déjeuner (le cas échéant) et l’accès gratuit au Wi-Fi. Les taxes locales (taxe de séjour) ne sont pas incluses et seront ajoutées au montant total lors du paiement. Les tarifs affichés sur le site peuvent être présentés en plusieurs devises à titre indicatif. La facturation est effectuée exclusivement en dirhams marocains (MAD). En cas d’affichage ou de paiement dans une autre devise, le taux de change applicable sera celui en vigueur au moment de la transaction, conformément au taux officiel déterminé par la banque ou le prestataire de paiement."
+      },
+      {
+        "h": "Article 3 – Taxes Locales",
+        "p": "En plus du tarif de la chambre, les clients doivent s’acquitter des taxes locales suivantes (par personne et par nuit, sauf pour les enfants selon conditions locales) :",
+        "bullets": [
+          "Taxe de Promotion Touristique (TPT) — destinée à l’ONMT : 11 MAD / personne / nuit.",
+          "Taxe Communale (taxe de séjour municipale) — versée à la commune de Marrakech : 15 MAD / personne / nuit (voyageurs de plus de 12 ans)."
+        ],
+        "note": "Ces taxes seront ajoutées à la facture finale au moment du paiement. Elles sont collectées par l’établissement mais reversées aux autorités compétentes (la commune de Marrakech et l’ONMT)."
+      },
+      {
+        "h": "Article 4 - Annulations",
+        "p": "Tarifs non remboursables : aucune annulation, modification ou remboursement n’est possible. En cas d’annulation, de modification ou de non-présentation, la totalité du séjour est facturée. Tarifs flexibles (7 jours) : annulation gratuite jusqu’à 7 jours avant l’arrivée. Passé ce délai ou en cas de non-présentation, le montant total de la réservation est facturé. Toute modification est soumise à disponibilité et confirmation écrite de l’établissement."
+      },
+      {
+        "h": "Article 5 - Paiement",
+        "p": "La validation de la réservation implique l’obligation de payer le prix indiqué. Le règlement s’effectue par carte bancaire via le système sécurisé PAYZONE. Cartes acceptées : Visa et Mastercard. Le débit est effectué au moment de la réservation."
+      },
+      {
+        "h": "Article 6 – Voyageurs Indépendants",
+        "p": "Un passeport en cours de validité est requis pour tous les voyageurs, y compris les enfants. La durée maximale d’un séjour touristique est de 3 mois. Certaines nationalités peuvent nécessiter un visa. Vérifiez les formalités auprès du consulat/ambassade du Maroc avant le départ. Conformément à la loi marocaine, un acte de mariage peut être exigé pour les couples de nationalité marocaine ou ressortissants de pays musulmans souhaitant séjourner dans la même chambre."
+      }
+    ],
+    "company": {
+      "title": "Généralités",
+      "lines": [
+        "Nom de la société : RENT-HERE",
+        "Siège social : 6, Rue Dayet Aoua 4eme Étage, Appt 16, Agdal - Rabat",
+        "Forme juridique : SARL",
+        "RC : 172493",
+        "IF : 60233734",
+        "TP : 25743022",
+        "ICE : 00344246900095",
+        "Email : hotel@ourikacamp.com",
+        "Tél : +212 648 489 748",
+        "Conditions générales de vente des services vendus sur www.ourikacamp.com",
+        "Date de dernière mise à jour : 10 octobre 2025"
+      ]
     }
   }
 }
@@ -156,5 +178,6 @@
 
 
 
-  }
+
+  
   
