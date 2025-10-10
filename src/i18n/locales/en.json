@@ -106,7 +106,7 @@
   "direct": {
     "heading": "Direct Contacts",
     "phone": "📞 +212 648-489748",
-    "email": "✉️ ourikacamp@outlook.com",
+    "email": "✉️ hotel@ourikacamp.com",
     "address": "📍 Ourika Camp — Km 10, Route de Ourika, Marrakesh 44000"
   },
   "follow": "Follow"
@@ -116,7 +116,8 @@
       "rights": "All rights reserved.",
       "top": "Top",
       "rooms": "Rooms",
-      "contact": "Contact"
+      "contact": "Contact",
+       "conditions": "Terms & Conditions"
     },
     "galleryPage": {
       "heading": "Gallery",
@@ -126,7 +127,38 @@
       "prev": "Previous",
       "counter": "{{current}} / {{total}}",
       "alt": "Gallery image {{n}}"
+    },
+    "conditions": {
+  "title": "Terms and Conditions",
+  "updated": "Last updated: October 10, 2025",
+  "articles": {
+    "1": {
+      "title": "Article 1 - Purpose",
+      "text": "These terms and conditions govern the sales by the company Rent-Here of service provisions in the field of tourism and hospitality."
+    },
+    "2": {
+      "title": "Article 2 - Prices",
+      "text": "Rates apply per room and per night, include VAT, breakfast (if applicable), and free Wi-Fi. Local taxes are not included and will be added upon payment."
+    },
+    "3": {
+      "title": "Article 3 - Local Taxes",
+      "text": "Tourism Promotion Tax (ONMT): 11 MAD per person per night. Municipal Tax: 15 MAD per person per night (for guests over 12 years old)."
+    },
+    "4": {
+      "title": "Article 4 - Cancellations",
+      "text": "Non-refundable rates cannot be cancelled or modified. Flexible rates (7 days): free cancellation up to 7 days before arrival."
+    },
+    "5": {
+      "title": "Article 5 - Payment",
+      "text": "Payment is made securely by credit card via PAYZONE. Accepted cards: Visa and Mastercard."
+    },
+    "6": {
+      "title": "Article 6 – Independent Travellers",
+      "text": "A valid passport is required for all travellers. Some nationalities may require a visa. Proof of marriage may be required for Moroccan or Muslim couples."
     }
+  }
+}
+
 
 
   }

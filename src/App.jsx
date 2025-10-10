@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import RoomsPage from './pages/RoomsPage'
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
+import Conditions from "./pages/Conditions";
 
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/rooms" element={<RoomsPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/conditions-generales" element={<Conditions />} />
       </Routes>
       <Footer />
     </div>

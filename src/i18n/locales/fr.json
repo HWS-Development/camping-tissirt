@@ -103,14 +103,15 @@
       "form": { "name": "Nom", "email": "E-mail", "message": "Message", "send": "Envoyer", "thanks": "Merci ! Nous vous répondronsau plus vite.", "phoneOpt": "Numéro de téléphone (facultatif)",
       "phoneHint": "Optionnel — si vous préférez être contacté·e par téléphone.",
       "phoneTitle": "Entrez un numéro de téléphone valide." },
-      "direct": { "heading": "Contacts directs",  "phone": "📞 +212 648-489748", "email": "✉️ ourikacamp@outlook.com", "address": "📍 Marrakech, Morocco"},
+      "direct": { "heading": "Contacts directs",  "phone": "📞 +212 648-489748", "email": "✉️ hotel@ourikacamp.com", "address": "📍 Marrakech, Morocco"},
       "follow": "Suivre"
     },
     "footer": {
       "rights": "Tous droits réservés.",
       "top": "Haut de page",
       "rooms": "Chambres",
-      "contact": "Contact"
+      "contact": "Contact",
+      "conditions": "Conditions Générales"
     },
     "galleryPage": {
       "heading": "Galerie",
@@ -120,7 +121,38 @@
       "prev": "Précédente",
       "counter": "{{current}} / {{total}}",
       "alt": "Image de la galerie {{n}}"
+    },
+    "conditions": {
+  "title": "Conditions Générales de Vente",
+  "updated": "Dernière mise à jour : 10 octobre 2025",
+  "articles": {
+    "1": {
+      "title": "Article 1 - Objet",
+      "text": "Les présentes conditions régissent les ventes par la société Rent-Here de prestations de services dans un cadre de tourisme et d’hospitalité."
+    },
+    "2": {
+      "title": "Article 2 - Prix",
+      "text": "Les tarifs indiqués s’entendent pour le nombre de personnes spécifié sur la page de la chambre, par nuit, et incluent la TVA applicable..."
+    },
+    "3": {
+      "title": "Article 3 - Taxes Locales",
+      "text": "Taxe de Promotion Touristique (ONMT): 11 MAD par personne et par nuit. Taxe Communale: 15 MAD par personne et par nuit (pour les voyageurs de plus de 12 ans)."
+    },
+    "4": {
+      "title": "Article 4 - Annulations",
+      "text": "Tarifs non remboursables: aucun remboursement possible. Tarifs flexibles (7 jours): annulation gratuite jusqu’à 7 jours avant la date d’arrivée."
+    },
+    "5": {
+      "title": "Article 5 - Paiement",
+      "text": "Le paiement s’effectue par carte bancaire via le système sécurisé PAYZONE. Les cartes acceptées sont Visa et Mastercard."
+    },
+    "6": {
+      "title": "Article 6 – Voyageurs Indépendants",
+      "text": "Un passeport en cours de validité est requis pour tous les voyageurs. Certaines nationalités nécessitent un visa."
     }
+  }
+}
+
 
 
 
