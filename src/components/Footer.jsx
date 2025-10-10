@@ -42,7 +42,7 @@ export default function Footer() {
     className="h-8 sm:h-10 object-contain"
   />
   <img
-    src="/images/paylogos.png"
+    src="/images/paylogos.png"    
     alt="Payment methods" 
     className="h-8 sm:h-10 object-contain"
   />
