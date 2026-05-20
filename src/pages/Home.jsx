@@ -1,27 +1,23 @@
 import Hero from '../components/Hero'
-import Booking from '../components/Booking'
-import HavreDePaix from '../components/HavreDePaix'   // ⬅️ add this
-
-
+import Overview from '../components/Overview'
 import Reviews from '../components/Reviews'
-import Gallery from '../components/Gallery'
+import Services from '../components/Services'
+import StayOptions from '../components/StayOptions'
+import Restaurant from '../components/Restaurant'
+import GalleryPreview from '../components/GalleryPreview'
 import Location from '../components/Location'
-import Contact from '../components/Contact'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Booking />
-
-  
+      <Overview />
       <Reviews />
-      <HavreDePaix /> 
-      <Gallery />
-        {/* ⬅️ new section */}
-
+      <Services />
+      <StayOptions />
+      <Restaurant />
+      <GalleryPreview />
       <Location />
-      <Contact />
     </>
   )
 }

@@ -1,44 +1,39 @@
-import { useTranslation } from 'react-i18next'
-
 export default function Location() {
-  const { t } = useTranslation()
-  const points = t('location.points', { returnObjects: true }) || []
-
   return (
-    <section id="location" className="py-16 bg-brand-desert/40">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          <div>
-            <h2 className="text-3xl sm:text-4xl font-bold">{t('location.heading')}</h2>
-            <p className="mt-3 text-brand-black/70">{t('location.desc')}</p>
-
-            <ul className="mt-6 grid gap-3">
-              {points.map((text, i) => {
-                const icons = ['🏛️','🏔️','🛏️'] // ville, vallée/Atlas, chambres
-                const icon = icons[i] || '•'
-                return (
-                  <li key={i} className="flex items-center gap-3">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      {icon}
-                    </span>
-                    <span className="text-brand-black/80">{text}</span>
-                  </li>
-                )
-              })}
-            </ul>
+    <section className="py-20">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">Access</p>
+          <h2 className="mt-4 text-4xl font-bold text-slate-950">Easy to find, easy to settle into</h2>
+          <p className="mt-6 text-lg leading-8 text-slate-600">
+            The campsite is located near Errachidia in a palm grove setting, with the village reachable in around five minutes on foot. It works well as a stop for travelers exploring the region or looking for a calm base for beautiful walks.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-[1.8rem] border border-white bg-white p-6 shadow-lg shadow-sky-100/60">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-600">Location details</p>
+              <p className="mt-4 text-slate-700">QQM9+RR8 Errachidia, Morocco</p>
+              <p className="mt-2 text-slate-700">31.7845, -4.2305</p>
+              <p className="mt-2 text-slate-700">N 31°47’4.2” W 4°13’49.872”</p>
+            </div>
+            <div className="rounded-[1.8rem] border border-white bg-[linear-gradient(180deg,#eff6ff,#ffffff)] p-6 shadow-lg shadow-sky-100/60">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-600">Why it feels easy</p>
+              <p className="mt-4 text-slate-700">Secure place</p>
+              <p className="mt-2 text-slate-700">Village 5 minutes walk</p>
+              <p className="mt-2 text-slate-700">Beautiful walks nearby</p>
+            </div>
           </div>
+        </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-soft border border-black/10">
-            <iframe
-              title="Map"
-              width="100%"
-              height="360"
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.90464155096!2d-7.964612517932828!3d31.52677890771596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafe52d2eaa32f1%3A0xb5f3e00442a20951!2sOurika%20Camp!5e0!3m2!1sen!2sma!4v1754991643595!5m2!1sen!2sma"
-            ></iframe>
-          </div>
+        <div className="overflow-hidden rounded-[2rem] border border-white bg-white p-3 shadow-[0_25px_80px_rgba(14,165,233,0.1)]">
+          <iframe
+            title="Camping Tissirt location"
+            src="https://www.google.com/maps?q=31.7845,-4.2305&z=14&output=embed"
+            width="100%"
+            height="460"
+            style={{ border: 0, borderRadius: '1.4rem' }}
+            loading="lazy"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>

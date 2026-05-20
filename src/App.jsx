@@ -1,23 +1,19 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import FloatingWhatsApp from './components/FloatingWhatsApp'
 import Home from './pages/Home'
-import RoomsPage from './pages/RoomsPage'
-import GalleryPage from './pages/GalleryPage';
-import ContactPage from './pages/ContactPage';
-import Conditions from "./pages/Conditions";
+import GalleryPage from './pages/GalleryPage'
 
 
 export default function App() {
   return (
-    <div className="font-sans text-brand-black bg-white">
+    <div className="font-sans bg-white text-slate-950">
       <Navbar />
+      <FloatingWhatsApp />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/rooms" element={<RoomsPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/conditions-generales" element={<Conditions />} />
       </Routes>
       <Footer />
     </div>

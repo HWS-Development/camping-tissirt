@@ -2,12 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/images/Logo-Fin.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#0284c7" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Camping Tissirt is a palm grove campsite near Errachidia with space for tents and caravans, four rooms on site, a restaurant, hot showers, electricity, and free Wi-Fi."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,17 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Tailwind config (extend brand colors)
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            brand: {
-              orange: '#f97316', // primary
-              black: '#0b0b0b',  // primary
-              desert: '#F3E7D3'  // third color
-            }
-          },
           fontFamily: {
             sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
           },
@@ -36,23 +27,6 @@
       }
     }
   </script>
-  <style>
-    :root{ --pat: radial-gradient(12px 12px at 12px 12px, rgba(0,0,0,0.08) 1px, transparent 1.2px); }
-    html { scroll-behavior: smooth; }
-    /* Decorative Moroccan-style border */
-    .tile-top { position: relative; }
-    .tile-top:before {
-      content: ""; position: absolute; inset: 0 0 auto 0; height: 10px;
-      background-image: repeating-linear-gradient(45deg, #f97316 0 12px, #0b0b0b 12px 24px, #F3E7D3 24px 36px);
-      border-top-left-radius: 1rem; border-top-right-radius: 1rem;
-    }
-    .bg-pattern { background-image: var(--pat); background-size: 28px 28px; }
-    .glass {
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom right, rgba(18,18,18,0.65), rgba(18,18,18,0.35));
-    }
-  </style>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -67,7 +41,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Ourika Camp</title>
+    <title>Camping Tissirt</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

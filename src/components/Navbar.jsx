@@ -1,71 +1,126 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
+
+function TentLogo() {
+  return (
+    <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-600 text-white shadow-lg shadow-sky-900/20">
+      <svg viewBox="0 0 64 64" className="h-7 w-7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8 46 30 14a2 2 0 0 1 3.3 0L56 46" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M22 46 32 28l10 18" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M32 28v24" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
+      </svg>
+    </span>
+  )
+}
+
+const homeLinks = [
+  { label: 'Home', href: '/#home' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Stay', href: '/#stay' },
+  { label: 'Restaurant', href: '/#restaurant' },
+  { label: 'Contact', href: '/#contact' }
+]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const { t, i18n } = useTranslation()
   const { pathname } = useLocation()
-  const [solid, setSolid] = useState(pathname !== '/')
 
   useEffect(() => {
-    const onResize = () => { if (window.innerWidth >= 1024) setOpen(false) }
+    const onResize = () => {
+      if (window.innerWidth >= 1024) {
+        setOpen(false)
+      }
+    }
+
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
   useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 40 || pathname !== '/')
-    onScroll()
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    setOpen(false)
   }, [pathname])
 
-  const switchTo = (lng) => i18n.changeLanguage(lng)
+  const navShell = 'border border-white/70 bg-white/88 text-slate-900 shadow-2xl shadow-sky-100/60 backdrop-blur-xl'
 
   return (
-    <header id="siteHeader" className="fixed top-0 inset-x-0 z-50">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mt-4 rounded-2xl shadow-soft glass text-white">
-          <nav className="flex items-center justify-between p-4">
-            <Link className="hover:text-brand-orange flex items-center gap-4" to="/">
-              <img src="/images/Logo-Fin.webp" alt="Ourika Camp Logo" className="h-16 w-16 rounded-full" />
-              <span className="text-lg sm:text-xl font-semibold tracking-wide">Ourika Camp</span>
-            </Link>
-            <button
-              className="lg:hidden inline-flex items-center justify-center rounded-xl border border-white/20 px-3 py-2"
-              onClick={() => setOpen(v => !v)}
-              aria-label="Toggle menu"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
-            </button>
-            <ul className="hidden lg:flex items-center gap-6">
-              <li><Link className="hover:text-brand-orange" to="/">{t('nav.home')}</Link></li>
-              <li><Link className="hover:text-brand-orange" to="/rooms">{t('nav.rooms')}</Link></li>
-              <li><Link className="hover:text-brand-orange" to="/gallery">{t('nav.gallery')}</Link></li>
-              {/* <li><a className="hover:text-brand-orange" href="/#location">{t('nav.location')}</a></li> */}
-              <li><a className="hover:text-brand-orange" href="/contact">{t('nav.contact')}</a></li>
-              <li><a className="ml-2 inline-flex items-center rounded-xl bg-primary px-4 py-2 font-semibold text-black" href="https://camp-ourika.hotelrunner.com/bv3/search">{t('nav.book')}</a></li>
-              
-          <div className="ml-3 flex items-center gap-2 text-sm">
-            <button onClick={() => switchTo('en')} className="px-2 py-1 rounded hover:bg-black/10">EN</button>
-            <span className="opacity-40">|</span>
-            <button onClick={() => switchTo('fr')} className="px-2 py-1 rounded hover:bg-black/10">FR</button>
-          </div>
-            </ul>
-          </nav>
-          {open && (
-            <div className="lg:hidden border-t border-white/10">
-              <ul className="p-4 grid gap-2 text-white/90">
-                <li><Link className="block rounded-lg px-3 py-2 hover:bg-white/10" to="/" onClick={() => setOpen(false)}>{t('nav.home')}</Link></li>
-                <li><Link className="block rounded-lg px-3 py-2 hover:bg-white/10" to="/rooms" onClick={() => setOpen(false)}>{t('nav.rooms')}</Link></li>
-                <li><Link className="block rounded-lg px-3 py-2 hover:bg-white/10" to="/gallery" onClick={() => setOpen(false)}>{t('nav.gallery')}</Link></li>
-                <li><Link className="block rounded-lg px-3 py-2 hover:bg-white/10" to="/contact" onClick={() => setOpen(false)}>{t('nav.contact')}</Link></li>
-                <li><a className="mt-2 block rounded-lg bg-primary px-3 py-2 text-black font-semibold" href="https://camp-ourika.hotelrunner.com/bv3/search" onClick={() => setOpen(false)}>Book Now</a></li>
-              </ul>
+    <header className="relative z-40 w-full">
+      <div className={`w-full max-w-none rounded-none ${navShell}`}>
+        <nav className="flex items-center justify-between px-4 py-3 sm:px-6">
+          <Link to="/" className="flex items-center gap-3" aria-label="Camping Tissirt home">
+            <div className="rounded-[1.4rem] bg-white/10 p-1">
+              <TentLogo />
             </div>
-          )}
-        </div>
+            <div>
+              <p className="text-lg font-bold tracking-[0.18em] uppercase">Camping Tissirt</p>
+              <p className="text-xs text-slate-500">Palm grove camping in Errachidia</p>
+            </div>
+          </Link>
+
+          <button
+            type="button"
+            className="inline-flex rounded-2xl bg-sky-50 px-3 py-2 text-sky-700 lg:hidden"
+            onClick={() => setOpen((value) => !value)}
+            aria-label="Toggle navigation"
+          >
+            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+
+          <div className="hidden items-center gap-3 lg:flex">
+            <div className="flex items-center gap-1 rounded-full bg-slate-50 px-2 py-2">
+              {homeLinks.map((item) => (
+                <a key={item.label} href={item.href} className="rounded-full px-4 py-2 text-sm font-medium transition hover:bg-white hover:text-sky-600">
+                  {item.label}
+                </a>
+              ))}
+              <Link to="/gallery" className="rounded-full px-4 py-2 text-sm font-medium transition hover:bg-white hover:text-sky-600">
+                Gallery
+              </Link>
+            </div>
+            <a
+              href="https://wa.me/212662141378"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-900/20 transition hover:-translate-y-0.5 hover:bg-sky-500"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </nav>
+
+        {open && (
+          <div className="border-t border-sky-100 px-4 pb-4 pt-3 lg:hidden">
+            <div className="grid gap-2">
+              {homeLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-sky-50 hover:text-sky-700"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <Link
+                to="/gallery"
+                onClick={() => setOpen(false)}
+                className="rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-sky-50 hover:text-sky-700"
+              >
+                Gallery
+              </Link>
+              <a
+                href="https://wa.me/212662141378"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+                className="mt-2 inline-flex items-center justify-center rounded-2xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white"
+              >
+                Contact on WhatsApp
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   )

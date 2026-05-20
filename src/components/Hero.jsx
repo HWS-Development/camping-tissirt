@@ -1,167 +1,75 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-
 export default function Hero() {
-  const { t } = useTranslation()
-
-  // Your hero images in /public/images/hero
-  const files = useMemo(
-    () => [
-      'Screenshot 2025-09-15 163505.png',
-      'Screenshot 2025-09-15 163518.png',
-      'Screenshot 2025-09-15 163530.png',
-    ],
-    []
-  )
-  const slides = useMemo(
-    () => files.map((f) => `${process.env.PUBLIC_URL}/images/hero/${f}`),
-    [files]
-  )
-
-  const [index, setIndex] = useState(0)
-  const [paused, setPaused] = useState(false)
-  const touchStartX = useRef(null)
-
-  // Preload (no flicker)
-  useEffect(() => {
-    slides.forEach((src) => {
-      const img = new Image()
-      img.decoding = 'async'
-      img.src = src
-    })
-  }, [slides])
-
-  const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length)
-  const next = () => setIndex((i) => (i + 1) % slides.length)
-
-  // Keyboard
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === 'ArrowLeft') prev()
-      if (e.key === 'ArrowRight') next()
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [])
-
-  // Autoplay (pause on hover)
-  useEffect(() => {
-    if (paused || slides.length <= 1) return
-    const id = setInterval(next, 5000)
-    return () => clearInterval(id)
-  }, [paused, slides.length])
-
-  // Touch swipe
-  const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX }
-  const onTouchEnd = (e) => {
-    const x = e.changedTouches[0].clientX
-    const dx = x - (touchStartX.current ?? x)
-    if (Math.abs(dx) > 40) (dx > 0 ? prev() : next())
-    touchStartX.current = null
-  }
-
   return (
-    <section
-      id="home"
-      className="relative min-h-[88vh] grid place-items-center overflow-hidden"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-    >
-      {/* Slides (instant switch, no fade) */}
-      <div className="absolute inset-0">
-        {slides.map((src, i) => (
-          <img
-            key={src}
-            src={src}
-            alt={t('galleryPage.alt', { n: i + 1, defaultValue: `Hero image ${i + 1}` })}
-            className={`absolute inset-0 h-full w-full object-cover object-center ${i === index ? 'opacity-100' : 'opacity-0'}`}
-            style={{ transition: 'opacity 0s' }} // instant cut (no flow)
-            aria-hidden={i !== index}
-            draggable="false"
-            loading={i === 0 ? 'eager' : 'lazy'}
-            fetchpriority={i === 0 ? 'high' : undefined}
-            decoding="async"
-          />
-        ))}
-      </div>
+    <section id="home" className="relative overflow-hidden pt-10 text-slate-950">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(56,189,248,0.18),_transparent_24%),radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.12),_transparent_28%)]" />
 
-      {/* Light, clear image + bottom gradient for text readability */}
-      <div className="pointer-events-none absolute inset-0">
-        {/* Very light global dim so photos stay bright */}
-        <div className="absolute inset-0 bg-black/15" />
-        {/* Stronger at the bottom for headings */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/60 to-transparent" />
-      </div>
+      <div className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="grid min-h-[88vh] gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="max-w-3xl py-8 lg:py-16">
+            <span className="inline-flex rounded-full border border-sky-200 bg-white/90 px-4 py-2 text-sm font-medium text-sky-700 shadow-sm shadow-sky-100/80 backdrop-blur">
+              Palm grove camping, 5 minutes from the village
+            </span>
+            <h1 className="mt-6 text-5xl font-black leading-[0.95] text-slate-950 sm:text-6xl lg:text-7xl">
+              Comfortable camping with a calm desert-side feeling.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+              Camping Tissirt is a quiet place near Errachidia for tents, caravans, and room stays, with a restaurant, clean hot showers, free Wi-Fi, and a warm welcome from Hassan and Ali.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://wa.me/212662141378"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-sky-600 px-7 py-4 font-semibold text-white shadow-lg shadow-sky-200/80 transition hover:-translate-y-0.5 hover:bg-sky-500"
+              >
+                Reserve by WhatsApp
+              </a>
+              <a
+                href="/#contact"
+                className="inline-flex items-center justify-center rounded-full border border-sky-200 bg-white px-7 py-4 font-semibold text-slate-900 shadow-sm transition hover:border-sky-300 hover:bg-sky-50"
+              >
+                Contact & location
+              </a>
+            </div>
 
-      {/* Controls (only if multiple slides) */}
-      {slides.length > 1 && (
-        <>
-          <button
-            type="button"
-            onClick={prev}
-            className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/25 hover:bg-white/35 focus:outline-none"
-            aria-label="Previous slide"
-          >
-            ‹
-          </button>
-          <button
-            type="button"
-            onClick={next}
-            className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/25 hover:bg-white/35 focus:outline-none"
-            aria-label="Next slide"
-          >
-            ›
-          </button>
-          <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-2">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setIndex(i)}
-                className={`h-2 w-2 rounded-full ${i === index ? 'bg-white' : 'bg-white/60'}`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
+            <div className="mt-10 grid gap-4 text-sm sm:grid-cols-3">
+              <div className="rounded-[1.8rem] border border-white bg-white/90 p-5 shadow-lg shadow-sky-100/70">
+                <p className="text-2xl font-bold text-slate-950">4 rooms</p>
+                <p className="mt-1 text-slate-600">For guests who prefer fixed comfort on site.</p>
+              </div>
+              <div className="rounded-[1.8rem] border border-white bg-white/90 p-5 shadow-lg shadow-sky-100/70">
+                <p className="text-2xl font-bold text-slate-950">Free Wi-Fi</p>
+                <p className="mt-1 text-slate-600">Useful internet access without losing the calm feel.</p>
+              </div>
+              <div className="rounded-[1.8rem] border border-white bg-white/90 p-5 shadow-lg shadow-sky-100/70">
+                <p className="text-2xl font-bold text-slate-950">Hot showers</p>
+                <p className="mt-1 text-slate-600">Very clean, spacious sanitary comfort included.</p>
+              </div>
+            </div>
           </div>
-        </>
-      )}
 
-      {/* Text + CTAs */}
-      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
-      <div className="flex flex-col items-center text-center gap-4 sm:gap-6">
-  <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm tracking-wide">
-    {t('home.welcome', { city: t('home.city') })}
-  </span>
+          <div className="relative lg:py-10">
+            <div className="absolute -left-6 top-10 hidden h-28 w-28 rounded-full bg-sky-200/40 blur-2xl lg:block" />
+            <div className="absolute -right-6 bottom-8 hidden h-36 w-36 rounded-full bg-sky-300/30 blur-3xl lg:block" />
 
-  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-    {t('home.headline')}
-  </h1>
-
-  {/* New subheadline */}
-  <p className="text-lg sm:text-xl font-medium text-white/90 tracking-wide">
-    Suites Hotel &amp; Resort
-  </p>
-
-  <p className="inline-flex items-center gap-2 rounded-full bg-white/30 text-white px-4 py-1 text-sm tracking-wide backdrop-blur-sm ring-1 ring-white/30">
-    {t('home.subtitle')}
-  </p>
-</div>
-
-
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a
-            href="#booking"
-            className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 font-semibold text-black shadow-soft"
-          >
-            {t('home.ctaBook')}
-          </a>
-          <a
-            href="/rooms"
-            className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-semibold text-white hover:border-white/60"
-          >
-            {t('home.ctaRooms')}
-          </a>
+            <div className="relative rounded-[2.2rem] border border-white/70 bg-white/70 p-3 shadow-[0_30px_80px_rgba(14,165,233,0.12)] backdrop-blur-sm">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/tout/${encodeURIComponent('Screenshot 2025-09-24 164554.png')}`}
+                alt="Camping Tissirt overview"
+                className="h-[26rem] w-full rounded-[1.7rem] object-cover sm:h-[34rem]"
+              />
+              <div className="absolute inset-x-8 bottom-8 rounded-[1.7rem] bg-slate-950/72 p-5 text-white backdrop-blur-md">
+                <p className="text-sm uppercase tracking-[0.24em] text-sky-200">Camping Tissirt</p>
+                <p className="mt-2 text-xl font-semibold">A secure and peaceful base in the palm grove.</p>
+                <div className="mt-4 flex flex-wrap gap-2 text-sm text-slate-200">
+                  <span className="rounded-full bg-white/10 px-3 py-2">Tents</span>
+                  <span className="rounded-full bg-white/10 px-3 py-2">Caravans</span>
+                  <span className="rounded-full bg-white/10 px-3 py-2">Restaurant</span>
+                  <span className="rounded-full bg-white/10 px-3 py-2">Village 5 min walk</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
