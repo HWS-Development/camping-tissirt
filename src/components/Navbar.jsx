@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 function TentLogo() {
   return (
@@ -13,17 +14,18 @@ function TentLogo() {
   )
 }
 
-const homeLinks = [
-  { label: 'Home', href: '/#home' },
-  { label: 'Services', href: '/#services' },
-  { label: 'Stay', href: '/#stay' },
-  { label: 'Restaurant', href: '/#restaurant' },
-  { label: 'Contact', href: '/#contact' }
-]
-
 export default function Navbar() {
+  const { t, i18n } = useTranslation()
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
+  const homeLinks = [
+    { label: t('nav.home'), href: '/#home' },
+    { label: t('nav.services'), href: '/#services' },
+    { label: t('nav.stay'), href: '/#stay' },
+    { label: t('nav.restaurant'), href: '/#restaurant' },
+    { label: t('nav.contact'), href: '/#contact' }
+  ]
+  const languages = ['en', 'fr', 'es']
 
   useEffect(() => {
     const onResize = () => {
@@ -46,13 +48,13 @@ export default function Navbar() {
     <header className="relative z-40 w-full">
       <div className={`w-full max-w-none rounded-none ${navShell}`}>
         <nav className="flex items-center justify-between px-4 py-3 sm:px-6">
-          <Link to="/" className="flex items-center gap-3" aria-label="Camping Tissirt home">
+          <Link to="/" className="flex items-center gap-3" aria-label={t('brand.homeAria')}>
             <div className="rounded-[1.4rem] bg-white/10 p-1">
               <TentLogo />
             </div>
             <div>
-              <p className="text-lg font-bold tracking-[0.18em] uppercase">Camping Tissirt</p>
-              <p className="text-xs text-slate-500">Palm grove camping in Errachidia</p>
+              <p className="text-lg font-bold tracking-[0.18em] uppercase">{t('brand.name')}</p>
+              <p className="text-xs text-slate-500">{t('brand.tagline')}</p>
             </div>
           </Link>
 
@@ -60,7 +62,7 @@ export default function Navbar() {
             type="button"
             className="inline-flex rounded-2xl bg-sky-50 px-3 py-2 text-sky-700 lg:hidden"
             onClick={() => setOpen((value) => !value)}
-            aria-label="Toggle navigation"
+            aria-label={t('nav.toggle')}
           >
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
               <path d="M4 7h16M4 12h16M4 17h16" />
@@ -68,6 +70,18 @@ export default function Navbar() {
           </button>
 
           <div className="hidden items-center gap-3 lg:flex">
+            <div className="flex items-center gap-1 rounded-full border border-sky-100 bg-white px-2 py-2">
+              {languages.map((language) => (
+                <button
+                  key={language}
+                  type="button"
+                  onClick={() => i18n.changeLanguage(language)}
+                  className={`rounded-full px-3 py-1 text-xs font-semibold transition ${i18n.resolvedLanguage === language ? 'bg-sky-600 text-white' : 'text-slate-600 hover:bg-sky-50 hover:text-sky-700'}`}
+                >
+                  {t(`languages.${language}`)}
+                </button>
+              ))}
+            </div>
             <div className="flex items-center gap-1 rounded-full bg-slate-50 px-2 py-2">
               {homeLinks.map((item) => (
                 <a key={item.label} href={item.href} className="rounded-full px-4 py-2 text-sm font-medium transition hover:bg-white hover:text-sky-600">
@@ -75,7 +89,7 @@ export default function Navbar() {
                 </a>
               ))}
               <Link to="/gallery" className="rounded-full px-4 py-2 text-sm font-medium transition hover:bg-white hover:text-sky-600">
-                Gallery
+                {t('nav.gallery')}
               </Link>
             </div>
             <a
@@ -84,7 +98,7 @@ export default function Navbar() {
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-900/20 transition hover:-translate-y-0.5 hover:bg-sky-500"
             >
-              WhatsApp
+              {t('nav.whatsapp')}
             </a>
           </div>
         </nav>
@@ -92,6 +106,18 @@ export default function Navbar() {
         {open && (
           <div className="border-t border-sky-100 px-4 pb-4 pt-3 lg:hidden">
             <div className="grid gap-2">
+              <div className="mb-2 flex items-center gap-2">
+                {languages.map((language) => (
+                  <button
+                    key={language}
+                    type="button"
+                    onClick={() => i18n.changeLanguage(language)}
+                    className={`rounded-full px-3 py-2 text-xs font-semibold transition ${i18n.resolvedLanguage === language ? 'bg-sky-600 text-white' : 'bg-sky-50 text-sky-700'}`}
+                  >
+                    {t(`languages.${language}`)}
+                  </button>
+                ))}
+              </div>
               {homeLinks.map((item) => (
                 <a
                   key={item.label}
@@ -107,7 +133,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-sky-50 hover:text-sky-700"
               >
-                Gallery
+                {t('nav.gallery')}
               </Link>
               <a
                 href="https://wa.me/212662141378"
@@ -116,7 +142,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex items-center justify-center rounded-2xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white"
               >
-                Contact on WhatsApp
+                {t('nav.contactWhatsapp')}
               </a>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 const items = [
   {
     title: 'Sanitary comfort',
@@ -56,14 +58,20 @@ function Icon({ icon }) {
 }
 
 export default function Services() {
+  const { t } = useTranslation()
+  const translatedItems = t('servicesSection.items', { returnObjects: true })
+  const serviceItems = Array.isArray(translatedItems)
+    ? translatedItems
+    : items.map(({ title, text }) => ({ title, text }))
+
   return (
     <section id="services" className="py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">Services</p>
-          <h2 className="mt-4 text-4xl font-bold text-slate-950">Everything needed for an easy camping stay</h2>
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">{t('servicesSection.eyebrow')}</p>
+          <h2 className="mt-4 text-4xl font-bold text-slate-950">{t('servicesSection.title')}</h2>
           <p className="mt-4 text-lg text-slate-600">
-            The site focuses on the essentials: a clean setting, practical comfort, friendly people, and the kind of small services that make travelers want to stay longer.
+            {t('servicesSection.body')}
           </p>
         </div>
 
@@ -78,8 +86,8 @@ export default function Services() {
                 </span>
                 <span className="text-sm font-semibold text-sky-400">0{index + 1}</span>
               </div>
-              <h3 className="mt-5 text-xl font-semibold text-slate-950">{item.title}</h3>
-              <p className="mt-3 leading-7 text-slate-600">{item.text}</p>
+              <h3 className="mt-5 text-xl font-semibold text-slate-950">{serviceItems[index].title}</h3>
+              <p className="mt-3 leading-7 text-slate-600">{serviceItems[index].text}</p>
             </article>
           ))}
         </div>

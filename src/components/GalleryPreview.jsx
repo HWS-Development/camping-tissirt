@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { galleryImages } from '../data/galleryImages'
 
 export default function GalleryPreview() {
+  const { t } = useTranslation()
   const previewImages = galleryImages.slice(0, 6)
 
   return (
@@ -9,17 +11,17 @@ export default function GalleryPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">Gallery</p>
-            <h2 className="mt-4 text-4xl font-bold text-slate-950">A first look at the place</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">{t('galleryPreview.eyebrow')}</p>
+            <h2 className="mt-4 text-4xl font-bold text-slate-950">{t('galleryPreview.title')}</h2>
             <p className="mt-4 text-lg text-slate-600">
-              A dedicated gallery page keeps all images in one place, while the homepage stays focused on the main information visitors need.
+              {t('galleryPreview.body')}
             </p>
           </div>
           <Link
             to="/gallery"
             className="inline-flex items-center justify-center rounded-full border border-sky-200 bg-white px-6 py-4 font-semibold text-sky-700 shadow-sm transition hover:bg-sky-50"
           >
-            Open full gallery
+            {t('galleryPreview.cta')}
           </Link>
         </div>
 

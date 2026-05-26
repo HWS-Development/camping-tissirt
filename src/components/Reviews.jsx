@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const reviews = [
   {
@@ -72,6 +73,7 @@ function getVisibleCount() {
 }
 
 export default function Reviews() {
+  const { t } = useTranslation()
   const [visibleCount, setVisibleCount] = useState(getVisibleCount)
   const [index, setIndex] = useState(0)
 
@@ -133,10 +135,10 @@ export default function Reviews() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">Reviews</p>
-            <h2 className="mt-4 text-4xl font-bold text-slate-950">What visitors say about Camping Tissirt</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">{t('reviewsSection.eyebrow')}</p>
+            <h2 className="mt-4 text-4xl font-bold text-slate-950">{t('reviewsSection.title')}</h2>
             <p className="mt-4 text-lg leading-8 text-slate-600">
-              Real visitor impressions about the welcome, the palm grove atmosphere, the clean facilities, and the calm of the campsite.
+              {t('reviewsSection.body')}
             </p>
           </div>
 
@@ -145,7 +147,7 @@ export default function Reviews() {
               type="button"
               onClick={prev}
               className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-sky-200 bg-white text-sky-700 shadow-sm transition hover:bg-sky-50"
-              aria-label="Previous reviews"
+              aria-label={t('reviewsSection.prev')}
             >
               <span aria-hidden="true">&larr;</span>
             </button>
@@ -153,7 +155,7 @@ export default function Reviews() {
               type="button"
               onClick={next}
               className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-sky-200 bg-white text-sky-700 shadow-sm transition hover:bg-sky-50"
-              aria-label="Next reviews"
+              aria-label={t('reviewsSection.next')}
             >
               <span aria-hidden="true">&rarr;</span>
             </button>
@@ -186,7 +188,7 @@ export default function Reviews() {
                 type="button"
                 onClick={() => setIndex(targetIndex)}
                 className={`h-3 rounded-full transition ${isActive ? 'w-10 bg-sky-600' : 'w-3 bg-sky-200 hover:bg-sky-300'}`}
-                aria-label={`Go to review page ${pageIndex + 1}`}
+                aria-label={t('reviewsSection.goto', { n: pageIndex + 1 })}
               />
             )
           })}

@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "stay": "Alojamiento",
+    "restaurant": "Restaurante",
+    "gallery": "Galeria",
+    "contact": "Contacto",
+    "whatsapp": "WhatsApp",
+    "contactWhatsapp": "Contactar por WhatsApp",
+    "toggle": "Abrir navegacion"
+  },
+  "languages": {
+    "en": "EN",
+    "fr": "FR",
+    "es": "ES"
+  },
+  "brand": {
+    "name": "Camping Tissirt",
+    "tagline": "Camping entre palmeras en Errachidia",
+    "homeAria": "Inicio de Camping Tissirt"
+  },
+  "hero": {
+    "eyebrow": "Camping entre palmeras, a 5 minutos del pueblo",
+    "title": "Camping comodo con un ambiente tranquilo al borde del desierto.",
+    "body": "Camping Tissirt es un lugar tranquilo cerca de Errachidia para tiendas, caravanas y estancias en habitaciones, con restaurante, duchas calientes limpias, Wi-Fi gratis y una calida bienvenida de Hassan y Ali.",
+    "book": "Reservar por WhatsApp",
+    "contact": "Contacto y ubicacion",
+    "stats": {
+      "roomsTitle": "4 habitaciones",
+      "roomsText": "Para huespedes que prefieren mas comodidad fija en el lugar.",
+      "wifiTitle": "Wi-Fi gratis",
+      "wifiText": "Conexion util sin perder la sensacion de calma.",
+      "showersTitle": "Duchas calientes",
+      "showersText": "Comodidad sanitaria muy limpia y espaciosa incluida."
+    },
+    "imageAlt": "Vista general de Camping Tissirt",
+    "overlayTitle": "Una base segura y tranquila en el palmeral.",
+    "chips": ["Tiendas", "Caravanas", "Restaurante", "Pueblo a 5 min a pie"]
+  },
+  "overview": {
+    "eyebrow": "Sobre el camping",
+    "title": "Un camping pequeno que se siente relajado desde la llegada",
+    "body": "Camping Tissirt esta pensado para viajeros que quieren noches tranquilas, instalaciones limpias y confort practico. El camping recibe tiendas y caravanas, con duchas calientes, electricidad, Wi-Fi gratis, pan casero por encargo, un lugar seguro y acceso facil al pueblo.",
+    "features": [
+      "Bonito camping cerrado dentro de un palmeral",
+      "Excelente acogida de Hassan y Ali",
+      "El pueblo esta a solo 5 minutos a pie",
+      "Bonitos paseos alrededor del camping"
+    ],
+    "imageAlt": "Palmeral en Camping Tissirt",
+    "detailsTitle": "Detalles utiles",
+    "coordinates": "Coordenadas",
+    "plusCode": "Codigo plus",
+    "pitchType": "Tipo de estancia",
+    "pitchValue": "Tiendas, caravanas, habitaciones y restaurante"
+  },
+  "reviewsSection": {
+    "eyebrow": "Resenas",
+    "title": "Lo que dicen los visitantes de Camping Tissirt",
+    "body": "Impresiones reales sobre la acogida, el ambiente del palmeral, la limpieza de las instalaciones y la calma del camping.",
+    "prev": "Resenas anteriores",
+    "next": "Siguientes resenas",
+    "goto": "Ir a la pagina de resenas {{n}}"
+  },
+  "servicesSection": {
+    "eyebrow": "Servicios",
+    "title": "Todo lo necesario para una estancia de camping facil",
+    "body": "El lugar se centra en lo esencial: un entorno limpio, confort practico, gente amable y pequenos servicios que hacen que los viajeros quieran quedarse mas tiempo.",
+    "items": [
+      { "title": "Confort sanitario", "text": "Bloques sanitarios muy limpios con duchas calientes y espaciosas incluidas en la estancia." },
+      { "title": "Electricidad", "text": "Hay acceso a electricidad para una instalacion de camping practica y comoda." },
+      { "title": "Wi-Fi gratis", "text": "Internet inalambrico disponible en el lugar para los huespedes." },
+      { "title": "Restaurante y snacks", "text": "Servicio de restaurante, snacks y pan casero disponibles por encargo." },
+      { "title": "Lugar seguro", "text": "Un lugar tranquilo y seguro para campistas, caravanas y viajeros de paso en la region." },
+      { "title": "Paseos y senderismo", "text": "Bonitos paseos cerca y senderismo disponible bajo demanda." }
+    ]
+  },
+  "staySection": {
+    "eyebrow": "Opciones de estancia",
+    "title": "Para tiendas, caravanas y habitaciones",
+    "body": "Camping Tissirt funciona muy bien para campistas independientes, viajeros de carretera y huespedes que quieren una habitacion en el lugar. El ambiente sigue siendo pequeno y acogedor, no abarrotado.",
+    "cta": "Ver la galeria",
+    "items": [
+      { "tag": "Camping independiente", "title": "Parcelas para tiendas", "text": "Una base sencilla y agradable para viajeros que cruzan la region con su propio equipo de camping." },
+      { "tag": "Parada de ruta", "title": "Bienvenida a caravanas", "text": "Adecuado para caravanas que buscan una parada tranquila con servicios y facil acceso al pueblo." },
+      { "tag": "Mas confort", "title": "Cuatro habitaciones en el lugar", "text": "Para huespedes que prefieren una comodidad mas fija sin salir del mismo entorno natural." }
+    ]
+  },
+  "roomsHome": {
+    "heading": "Habitaciones En La Propiedad",
+    "sub": "Camping Tissirt tambien ofrece habitaciones en el lugar para viajeros que quieren mas comodidad sin dejar el mismo entorno tranquilo.",
+    "viewMore": "Ver mas"
+  },
+  "roomsPage": {
+    "title": "Nuestras habitaciones",
+    "intro": "Descubra las habitaciones disponibles directamente en Camping Tissirt para una estancia comoda dentro de la propiedad.",
+    "book": "Reservar",
+    "items": {
+      "double": {
+        "title": "Habitacion 01",
+        "desc": "La Habitacion 01 forma parte de las habitaciones disponibles en el lugar para viajeros que quieren un alojamiento fijo en vez de camping."
+      },
+      "triplePool": {
+        "title": "Habitacion 02",
+        "desc": "La Habitacion 02 ofrece otra opcion de alojamiento en el lugar para huespedes que buscan una estancia sencilla y comoda."
+      },
+      "juniorSuite": {
+        "title": "Habitacion 03",
+        "desc": "La Habitacion 03 muestra otra habitacion disponible directamente en Camping Tissirt para visitantes que prefieren dormir bajo techo."
+      },
+      "familySuite": {
+        "title": "Habitacion 01",
+        "desc": "Esta ficha utiliza la serie de fotos de la Habitacion 01 como opcion adicional de habitacion en la galeria actual."
+      }
+    }
+  },
+  "restaurantSection": {
+    "eyebrow": "Restaurante",
+    "title": "Comer en el lugar sin salir de la calma del campamento",
+    "body": "El restaurante aporta una comodidad real al camping. Los huespedes tambien pueden pedir snacks y pan casero, lo que facilita instalarse despues de la llegada y disfrutar del dia con un ritmo mas tranquilo.",
+    "imageAlt": "Restaurante en Camping Tissirt",
+    "cards": [
+      { "title": "Comidas en el lugar", "text": "Servicio de restaurante directamente en el camping para residentes y viajeros de paso." },
+      { "title": "Pan casero", "text": "Se puede preparar pan fresco por encargo, un detalle util y acogedor para los campistas." },
+      { "title": "Buena base para dias de paseo", "text": "Despues de paseos locales o caminatas bajo demanda, los huespedes pueden volver a duchas, comida, Wi-Fi y un ambiente mas tranquilo dentro del palmeral." }
+    ]
+  },
+  "galleryPreview": {
+    "eyebrow": "Galeria",
+    "title": "Una primera mirada al lugar",
+    "body": "Una pagina de galeria dedicada mantiene todas las imagenes juntas, mientras la pagina de inicio sigue centrada en la informacion principal que necesitan los visitantes.",
+    "cta": "Abrir galeria completa"
+  },
+  "galleryPage": {
+    "heading": "Galeria",
+    "heroChip": "Galeria principal",
+    "heroTitle": "Galeria de fotos de Camping Tissirt",
+    "heroBody": "Un recorrido visual por el camping, el ambiente del palmeral, sus rincones tranquilos y la comodidad practica que facilita parar y quedarse.",
+    "moodTitle": "Ambiente",
+    "moodText": "Tranquilo, aireado y agradable a la vista.",
+    "useTitle": "Uso",
+    "useText": "Abra cualquier imagen para recorrer la serie completa en la caja de luz.",
+    "openImage": "Abrir imagen de galeria {{n}}",
+    "close": "Cerrar",
+    "next": "Siguiente",
+    "prev": "Anterior",
+    "counter": "{{current}} / {{total}}",
+    "alt": "Imagen de galeria {{n}}"
+  },
+  "locationSection": {
+    "eyebrow": "Acceso",
+    "title": "Facil de encontrar, facil de instalarse",
+    "body": "El camping esta situado cerca de Errachidia en un entorno de palmeral, con el pueblo a unos cinco minutos a pie. Funciona muy bien como parada para viajeros que exploran la region o buscan una base tranquila para bonitos paseos.",
+    "detailsTitle": "Detalles de ubicacion",
+    "easeTitle": "Por que resulta facil",
+    "easeItems": ["Lugar seguro", "Pueblo a 5 minutos a pie", "Bonitos paseos cerca"],
+    "mapTitle": "Ubicacion de Camping Tissirt"
+  },
+  "footerSection": {
+    "eyebrow": "Contacto",
+    "title": "Reserve su estancia directamente con Camping Tissirt",
+    "body": "Para tiendas, caravanas, habitaciones, informacion del restaurante o solicitudes de paseo, contacte directamente con el camping y obtenga rapidamente los detalles que necesita.",
+    "email": "Correo",
+    "detailsTitle": "Detalles del camping",
+    "detailsHeading": "Tiendas, caravanas, 4 habitaciones, restaurante",
+    "detailsBody": "Duchas limpias, electricidad, Wi-Fi gratis, snacks y pan casero por encargo, y un lugar seguro para una estancia tranquila en el palmeral.",
+    "rights": "Todos los derechos reservados."
+  }
+}

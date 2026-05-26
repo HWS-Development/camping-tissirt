@@ -16,10 +16,6 @@ export default function Rooms() {
     {
       key: 'juniorSuite',
       img: getCover('juniorSuite')
-    },
-    {
-      key: 'familySuite',
-      img: getCover('familySuite')
     }
   ]
 
@@ -31,7 +27,7 @@ export default function Rooms() {
           <p className="mt-2 text-brand-black/70">{t('roomsHome.sub')}</p>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((room) => (
             <article key={room.key} className="rounded-2xl overflow-hidden bg-white shadow-soft border border-black/5">
               <img className="h-48 w-full object-cover" src={room.img} alt={t(`roomsPage.items.${room.key}.title`)} />

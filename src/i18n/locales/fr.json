@@ -1,182 +1,170 @@
 {
-    "brand": "Ourika Camp ",
-    "nav": { "home": "Accueil", "rooms": "Chambres", "reviews": "Avis", "gallery": "Galerie", "location": "Emplacement", "contact": "Contact", "book": "Réserver" },
-    "home": {
-      "welcome": "Bienvenue à {{city}}",
-      "city": "Marrakech",
-      "headline": "Ourika Camp",
-      "subtitle": " Un refuge chaleureux aux portes de Marrakech, où    élégance et authenticité se rencontrent pour une expérience inoubliable",
-      "ctaBook": "Réserver votre séjour",
-      "ctaRooms": "Découvrir les chambres"
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "stay": "Sejour",
+    "restaurant": "Restaurant",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "contactWhatsapp": "Contacter sur WhatsApp",
+    "toggle": "Ouvrir la navigation"
+  },
+  "languages": {
+    "en": "EN",
+    "fr": "FR",
+    "es": "ES"
+  },
+  "brand": {
+    "name": "Camping Tissirt",
+    "tagline": "Camping dans la palmeraie a Errachidia",
+    "homeAria": "Accueil Camping Tissirt"
+  },
+  "hero": {
+    "eyebrow": "Camping dans la palmeraie, a 5 minutes du village",
+    "title": "Camping confortable avec une sensation calme aux portes du desert.",
+    "body": "Camping Tissirt est un lieu calme pres d'Errachidia pour tentes, caravanes et sejours en chambre, avec restaurant, douches chaudes propres, Wi-Fi gratuit et un accueil chaleureux de Hassan et Ali.",
+    "book": "Reserver par WhatsApp",
+    "contact": "Contact et localisation",
+    "stats": {
+      "roomsTitle": "4 chambres",
+      "roomsText": "Pour les voyageurs qui preferent un confort fixe sur place.",
+      "wifiTitle": "Wi-Fi gratuit",
+      "wifiText": "Connexion utile sans perdre l'ambiance calme.",
+      "showersTitle": "Douches chaudes",
+      "showersText": "Confort sanitaire tres propre et spacieux inclus."
     },
-  "roomsPage": {
-  "title": "Nos Chambres",
-  "intro": "Découvrez notre sélection de chambres et suites alliant charme de Marrakech et confort moderne. Chaque espace a été pensé pour offrir une atmosphère chaleureuse et authentique, tout en répondant aux standards de confort les plus élevés. Que vous voyagiez en couple, en famille ou entre amis, vous trouverez l’hébergement idéal pour un séjour inoubliable à Marrakech.",
-  "book": "Réserver",
-  "items": {
-    "double": {
-      "title": "Chambre 01",
-      "desc": "La Chambre 01 fait partie des chambres disponibles sur place pour les voyageurs qui souhaitent un vrai hébergement au lieu du camping."
-    },
-    "triplePool": {
-      "title": "Chambre 02",
-      "desc": "La Chambre 02 propose une autre option d'hébergement sur place pour les clients qui recherchent un séjour simple et confortable dans la propriété."
-    },
-    "juniorSuite": {
-      "title": "Chambre 03",
-      "desc": "La Chambre 03 met en avant une autre chambre disponible directement à Camping Tissirt pour les visiteurs qui préfèrent un hébergement intérieur."
-    },
-    "familySuite": {
-      "title": "Chambre 01",
-      "desc": "Cette fiche utilise la série de photos de la Chambre 01 comme option supplémentaire de chambre sur place dans la galerie actuelle."
-    }
-  }
-}
-,
-    "roomsHome": {
-        "heading": "Chambres Sur La Propriete",
-        "sub": "Camping Tissirt propose aussi des chambres sur place pour les voyageurs qui veulent plus de confort tout en restant dans le meme cadre paisible.",
-        "viewMore": "Voir plus"
-    },
-    "reviews": {
-        "heading": "Avis des clients",
-        "sub": "Impressions authentiques de nos récents visiteurs.",
-        "items": [
-            { "name": "", "text": "Un grand merci pour l'excellent service de l'hôtel. J'ai particulièrement apprécié le professionnalisme et la gentillesse du personnel, qui ont rendu mon séjour encore plus agréable. Le grand espace de l’établissement est également un atout, offrant confort et liberté. Bravo et bonne continuation." },
-            { "name": "", "text": "Excellente expérience.J'y étais avec des amis il y a quelques semaines pour me reposer, et nous n'avons pas été déçus !Personnel chaleureux et accueillant, nourriture de qualité et abordable, grande piscine et, plus généralement, hôtel très charmant." },
-            { "name": "", "text": "Très bonne ambiance. Plats de qualité et baignade paisible dans une belle piscine au son de la bonne musique. À faire en famille ou entre amis. Des activités sont même proposées aux enfants (ping-pong, basket-ball…)." }
-        ]
-    },
-    "booking": {
-      "labels": { "checkin": "Arrivée", "checkout": "Départ", "guests": "Voyageurs", "promo": "Code promo", "search": "Rechercher" },
-      "nights_one": "Parfait ! {{count}} nuit sélectionnée.",
-      "nights_other": "Parfait ! {{count}} nuits sélectionnées.",
-      "invalid": "Veuillez choisir une date de départ après la date d’arrivée.",
-      "guestsOptions": ["1 adulte", "2 adultes", "3 adultes", "4 adultes", "Famille (2+2)"]
-    },
-    "gallery": {
-      "heading": "Galerie",
-      "sub": " A touch of color and serenity."
-    },
-    "location": {
-  "heading": "Un havre de paix, aux portes de la ville",
-  "desc": "Ourika Camp offre un accès rapide aux souks animés et à la médina historique, tout en vous garantissant l’élégance et la sérénité d’une adresse exclusive.",
-  "points": [
-    "Un havre de paix à proximité des attractions incontournables de la ville",
-    "Aux portes de la vallée de l’Ourika et de l’Atlas, idéal pour des escapades inoubliables",
-    "Des chambres spacieuses, alliant confort moderne et charme authentique"
-  ]
-},
-"haven": {
-  "heading": "Équipements et Installations ",
-  "intro": "🌟Entre loisirs et tradition, en solo ou en famille, pour un court séjour ou une longue escapade, Ourika Camp vous accueille dans un cadre unique pour profiter pleinement du beau temps et de l’art de vivre à Marrakech.",
-  "cards": [
-    {
-      "icon": "🌊",
-      "title": "Loisirs & Bien-être",
-      "body": "Deux grandes piscines disponibles toute l’année : profitez de la baignade en toute saison, avec transats et daybeds pour vous relaxer au soleil ou à l’ombre.\n\nEspace de jeux animé : ping-pong, panier de basket et trampoline pour divertir enfants et adultes."
-    },
-    {
-      "icon": "🏕️",
-      "title": "Espaces Authentiques",
-      "body": "Tente caïdale traditionnelle : un lieu unique pour partager des instants conviviaux, se retrouver entre amis ou organiser des événements privés dans une ambiance marocaine raffinée."
-    },
-    {
-      "icon": "🚗",
-      "title": "Confort & Sécurité",
-      "body": "Parking privé et sécurisé (60+ places) : un stationnement spacieux, gardé et accessible, offrant tranquillité d’esprit à nos visiteurs."
-    },
-    {
-      "icon": "🍴",
-      "title": "Expérience Culinaire",
-      "body": "Restaurant à la carte : savourez une cuisine internationale variée, alliant saveurs locales et plats internationaux. Disponible pour le petit-déjeuner, le déjeuner et le dîner, dans une atmosphère chaleureuse et conviviale."
-    }
-  ]
-}
-
-,
-
-    "contact": {
-      "heading": "Contactez-nous",
-      "sub": "Questions, réservations de groupe ou demandes spéciales — nous sommes là pour vous aider.",
-      "form": { "name": "Nom", "email": "E-mail", "message": "Message", "send": "Envoyer", "thanks": "Merci ! Nous vous répondronsau plus vite.", "phoneOpt": "Numéro de téléphone (facultatif)",
-      "phoneHint": "Optionnel — si vous préférez être contacté·e par téléphone.",
-      "phoneTitle": "Entrez un numéro de téléphone valide." },
-      "direct": { "heading": "Contacts directs",  "phone": "📞 +212 648-489748", "email": "✉️ hotel@ourikacamp.com", "address": "📍 Marrakech, Morocco"},
-      "follow": "Suivre"
-    },
-    "footer": {
-      "rights": "Tous droits réservés.",
-      "top": "Haut de page",
-      "rooms": "Chambres",
-      "contact": "Contact",
-      "conditions": "Conditions Générales"
-    },
-    "galleryPage": {
-      "heading": "Galerie",
-      "sub": "Parcourez des photos du riad et des environs.",
-      "close": "Fermer",
-      "next": "Suivante",
-      "prev": "Précédente",
-      "counter": "{{current}} / {{total}}",
-      "alt": "Image de la galerie {{n}}"
-    },
-  "legal": {
-    "title": "Conditions Générales de Vente",
-    "updated": "10 octobre 2025",
-    "sections": [
-      {
-        "h": "Article 1 - Objet",
-        "p": "Les présentes conditions régissent les ventes par la société Rent-Here de prestations de services dans un cadre de tourisme et d’hospitalité."
-      },
-      {
-        "h": "Article 2 - Prix",
-        "p": "Les tarifs indiqués s’entendent pour le nombre de personnes spécifié sur la page de la chambre, par nuit, et incluent la TVA applicable, le petit-déjeuner (le cas échéant) et l’accès gratuit au Wi-Fi. Les taxes locales (taxe de séjour) ne sont pas incluses et seront ajoutées au montant total lors du paiement. Les tarifs affichés sur le site peuvent être présentés en plusieurs devises à titre indicatif. La facturation est effectuée exclusivement en dirhams marocains (MAD). En cas d’affichage ou de paiement dans une autre devise, le taux de change applicable sera celui en vigueur au moment de la transaction, conformément au taux officiel déterminé par la banque ou le prestataire de paiement."
-      },
-      {
-        "h": "Article 3 – Taxes Locales",
-        "p": "En plus du tarif de la chambre, les clients doivent s’acquitter des taxes locales suivantes (par personne et par nuit, sauf pour les enfants selon conditions locales) :",
-        "bullets": [
-          "Taxe de Promotion Touristique (TPT) — destinée à l’ONMT : 11 MAD / personne / nuit.",
-          "Taxe Communale (taxe de séjour municipale) — versée à la commune de Marrakech : 15 MAD / personne / nuit (voyageurs de plus de 12 ans)."
-        ],
-        "note": "Ces taxes seront ajoutées à la facture finale au moment du paiement. Elles sont collectées par l’établissement mais reversées aux autorités compétentes (la commune de Marrakech et l’ONMT)."
-      },
-      {
-        "h": "Article 4 - Annulations",
-        "p": "Tarifs non remboursables : aucune annulation, modification ou remboursement n’est possible. En cas d’annulation, de modification ou de non-présentation, la totalité du séjour est facturée. Tarifs flexibles (7 jours) : annulation gratuite jusqu’à 7 jours avant l’arrivée. Passé ce délai ou en cas de non-présentation, le montant total de la réservation est facturé. Toute modification est soumise à disponibilité et confirmation écrite de l’établissement."
-      },
-      {
-        "h": "Article 5 - Paiement",
-        "p": "La validation de la réservation implique l’obligation de payer le prix indiqué. Le règlement s’effectue par carte bancaire via le système sécurisé PAYZONE. Cartes acceptées : Visa et Mastercard. Le débit est effectué au moment de la réservation."
-      },
-      {
-        "h": "Article 6 – Voyageurs Indépendants",
-        "p": "Un passeport en cours de validité est requis pour tous les voyageurs, y compris les enfants. La durée maximale d’un séjour touristique est de 3 mois. Certaines nationalités peuvent nécessiter un visa. Vérifiez les formalités auprès du consulat/ambassade du Maroc avant le départ. Conformément à la loi marocaine, un acte de mariage peut être exigé pour les couples de nationalité marocaine ou ressortissants de pays musulmans souhaitant séjourner dans la même chambre."
-      }
+    "imageAlt": "Vue d'ensemble de Camping Tissirt",
+    "overlayTitle": "Une base sure et paisible dans la palmeraie.",
+    "chips": ["Tentes", "Caravanes", "Restaurant", "Village a 5 min a pied"]
+  },
+  "overview": {
+    "eyebrow": "A propos du camping",
+    "title": "Un camping a taille humaine qui detend des l'arrivee",
+    "body": "Camping Tissirt est pense pour les voyageurs qui veulent des nuits paisibles, des installations propres et un confort pratique. Le camping accueille tentes et caravanes, avec douches chaudes, electricite, Wi-Fi gratuit, pain maison sur commande, un lieu sur et un acces facile au village.",
+    "features": [
+      "Joli petit camping ferme dans une palmeraie",
+      "Excellent accueil de Hassan et Ali",
+      "Village a seulement 5 minutes a pied",
+      "Belles promenades autour du camping"
     ],
-    "company": {
-      "title": "Généralités",
-      "lines": [
-        "Nom de la société : RENT-HERE",
-        "Siège social : 6, Rue Dayet Aoua 4eme Étage, Appt 16, Agdal - Rabat",
-        "Forme juridique : SARL",
-        "RC : 172493",
-        "IF : 60233734",
-        "TP : 25743022",
-        "ICE : 00344246900095",
-        "Email : hotel@ourikacamp.com",
-        "Tél : +212 648 489 748",
-        "Conditions générales de vente des services vendus sur www.ourikacamp.com",
-        "Date de dernière mise à jour : 10 octobre 2025"
-      ]
+    "imageAlt": "Palmeraie a Camping Tissirt",
+    "detailsTitle": "Infos utiles",
+    "coordinates": "Coordonnees",
+    "plusCode": "Plus code",
+    "pitchType": "Type de sejour",
+    "pitchValue": "Tentes, caravanes, chambres et restaurant"
+  },
+  "reviewsSection": {
+    "eyebrow": "Avis",
+    "title": "Ce que disent les visiteurs de Camping Tissirt",
+    "body": "Impressions reelles sur l'accueil, l'ambiance de la palmeraie, la proprete des installations et le calme du camping.",
+    "prev": "Avis precedents",
+    "next": "Avis suivants",
+    "goto": "Aller a la page d'avis {{n}}"
+  },
+  "servicesSection": {
+    "eyebrow": "Services",
+    "title": "Tout le necessaire pour un sejour camping facile",
+    "body": "Le lieu se concentre sur l'essentiel : un cadre propre, un confort pratique, des gens accueillants et les petits services qui donnent envie de rester plus longtemps.",
+    "items": [
+      { "title": "Confort sanitaire", "text": "Blocs sanitaires tres propres avec douches chaudes et spacieuses incluses dans le sejour." },
+      { "title": "Electricite", "text": "L'acces a l'electricite est disponible pour une installation de camping pratique et confortable." },
+      { "title": "Wi-Fi gratuit", "text": "Internet sans fil disponible sur place pour les clients." },
+      { "title": "Restaurant et snacks", "text": "Service de restauration, snacks et pain maison disponibles sur commande." },
+      { "title": "Lieu sur", "text": "Un lieu calme et securise pour campeurs, caravanes et voyageurs de passage dans la region." },
+      { "title": "Promenades et randonnee", "text": "Belles promenades a proximite et randonnee disponible sur demande." }
+    ]
+  },
+  "staySection": {
+    "eyebrow": "Options de sejour",
+    "title": "Pour tentes, caravanes et sejours en chambre",
+    "body": "Camping Tissirt convient tres bien aux campeurs independants, aux voyageurs sur la route et aux clients qui veulent une chambre sur place. L'ambiance reste a taille humaine et accueillante plutot que surchargee.",
+    "cta": "Voir la galerie",
+    "items": [
+      { "tag": "Camping independant", "title": "Emplacements tente", "text": "Une base simple et agreable pour les voyageurs qui traversent la region avec leur propre equipement de camping." },
+      { "tag": "Etape road trip", "title": "Accueil caravanes", "text": "Adapte aux caravanes qui cherchent une halte calme avec services et acces facile au village." },
+      { "tag": "Plus de confort", "title": "Quatre chambres sur place", "text": "Pour les clients qui preferent plus de confort fixe tout en restant dans le meme cadre naturel." }
+    ]
+  },
+  "roomsHome": {
+    "heading": "Chambres Sur La Propriete",
+    "sub": "Camping Tissirt propose aussi des chambres sur place pour les voyageurs qui veulent plus de confort tout en restant dans le meme cadre paisible.",
+    "viewMore": "Voir plus"
+  },
+  "roomsPage": {
+    "title": "Nos Chambres",
+    "intro": "Decouvrez les chambres disponibles directement a Camping Tissirt pour un sejour confortable sur la propriete.",
+    "book": "Reserver",
+    "items": {
+      "double": {
+        "title": "Chambre 01",
+        "desc": "La Chambre 01 fait partie des chambres disponibles sur place pour les voyageurs qui souhaitent un vrai hebergement au lieu du camping."
+      },
+      "triplePool": {
+        "title": "Chambre 02",
+        "desc": "La Chambre 02 propose une autre option d'hebergement sur place pour les clients qui recherchent un sejour simple et confortable dans la propriete."
+      },
+      "juniorSuite": {
+        "title": "Chambre 03",
+        "desc": "La Chambre 03 met en avant une autre chambre disponible directement a Camping Tissirt pour les visiteurs qui preferent un hebergement interieur."
+      },
+      "familySuite": {
+        "title": "Chambre 01",
+        "desc": "Cette fiche utilise la serie de photos de la Chambre 01 comme option supplementaire de chambre sur place dans la galerie actuelle."
+      }
     }
+  },
+  "restaurantSection": {
+    "eyebrow": "Restaurant",
+    "title": "Manger sur place sans quitter le calme du camp",
+    "body": "Le restaurant apporte une vraie facilite au camping. Les clients peuvent aussi commander des snacks et du pain maison, ce qui permet de s'installer facilement apres l'arrivee et de profiter de la journee a un rythme plus lent.",
+    "imageAlt": "Restaurant a Camping Tissirt",
+    "cards": [
+      { "title": "Repas sur place", "text": "Service de restauration directement au camp pour les residents et les voyageurs de passage." },
+      { "title": "Pain maison", "text": "Du pain frais peut etre prepare sur commande, un detail utile et accueillant pour les campeurs." },
+      { "title": "Bonne base pour les jours de balade", "text": "Apres des promenades locales ou une randonnee sur demande, les clients retrouvent douches, repas, Wi-Fi et une ambiance plus calme dans la palmeraie." }
+    ]
+  },
+  "galleryPreview": {
+    "eyebrow": "Galerie",
+    "title": "Un premier apercu du lieu",
+    "body": "Une page galerie dediee garde toutes les images au meme endroit, tandis que la page d'accueil reste concentree sur les informations principales utiles aux visiteurs.",
+    "cta": "Ouvrir la galerie complete"
+  },
+  "galleryPage": {
+    "heading": "Galerie",
+    "heroChip": "Hero galerie",
+    "heroTitle": "Galerie photo de Camping Tissirt",
+    "heroBody": "Une visite visuelle du camping, de son ambiance palmeraie, de ses coins calmes et du confort pratique qui donne envie de s'arreter et de rester.",
+    "moodTitle": "Ambiance",
+    "moodText": "Calme, aeree et agreable au regard.",
+    "useTitle": "Usage",
+    "useText": "Ouvrez n'importe quelle image pour parcourir toute la serie dans la lightbox.",
+    "openImage": "Ouvrir l'image de galerie {{n}}",
+    "close": "Fermer",
+    "next": "Suivante",
+    "prev": "Precedente",
+    "counter": "{{current}} / {{total}}",
+    "alt": "Image de la galerie {{n}}"
+  },
+  "locationSection": {
+    "eyebrow": "Acces",
+    "title": "Facile a trouver, facile pour s'installer",
+    "body": "Le camping se situe pres d'Errachidia dans un cadre de palmeraie, avec le village accessible en environ cinq minutes a pied. C'est une bonne etape pour les voyageurs qui explorent la region ou cherchent une base calme pour de belles promenades.",
+    "detailsTitle": "Details de localisation",
+    "easeTitle": "Pourquoi c'est pratique",
+    "easeItems": ["Lieu sur", "Village a 5 minutes a pied", "Belles promenades a proximite"],
+    "mapTitle": "Localisation de Camping Tissirt"
+  },
+  "footerSection": {
+    "eyebrow": "Contact",
+    "title": "Reservez votre sejour directement avec Camping Tissirt",
+    "body": "Pour les tentes, caravanes, chambres, informations restaurant ou demandes de promenade, contactez directement le camping et obtenez rapidement les details utiles.",
+    "email": "Email",
+    "detailsTitle": "Details du camping",
+    "detailsHeading": "Tentes, caravanes, 4 chambres, restaurant",
+    "detailsBody": "Douches propres, electricite, Wi-Fi gratuit, snacks et pain maison sur commande, et un lieu sur pour un sejour calme dans la palmeraie.",
+    "rights": "Tous droits reserves."
   }
 }
-
-
-
-
-
-  
-  

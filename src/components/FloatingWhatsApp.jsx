@@ -1,10 +1,14 @@
+import { useTranslation } from 'react-i18next'
+
 export default function FloatingWhatsApp() {
+  const { t } = useTranslation()
+
   return (
     <a
       href="https://wa.me/212662141378"
       target="_blank"
       rel="noreferrer"
-      aria-label="Contact Camping Tissirt on WhatsApp"
+      aria-label={t('nav.contactWhatsapp')}
       className="fixed bottom-5 right-5 z-[60] inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-black/20 transition hover:scale-105 hover:bg-[#20bd5c]"
     >
       <span className="absolute inset-0 -z-10 rounded-full bg-[#25D366] opacity-30 blur-xl" />

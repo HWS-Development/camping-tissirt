@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { galleryImages } from '../data/galleryImages'
 
 export default function GalleryPage() {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const [index, setIndex] = useState(0)
 
@@ -43,25 +45,25 @@ export default function GalleryPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/15 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-sky-100 backdrop-blur">
-                  Gallery hero
+                  {t('galleryPage.heroChip')}
                 </span>
-                <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl">Camping Tissirt photo gallery</h1>
+                <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl">{t('galleryPage.heroTitle')}</h1>
               </div>
             </div>
 
             <div className="px-2 pb-2 lg:px-6 lg:pb-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">Gallery</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">{t('galleryPage.heading')}</p>
               <p className="mt-4 text-lg leading-8 text-slate-600 sm:text-xl">
-                A dedicated visual tour of the campsite, its palm grove atmosphere, its calm corners, and the practical comfort that makes it easy to stop and stay.
+                {t('galleryPage.heroBody')}
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-[1.6rem] border border-sky-100 bg-sky-50/70 p-5">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600">Mood</p>
-                  <p className="mt-2 text-slate-700">Quiet, airy, and comfortable to the eye.</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600">{t('galleryPage.moodTitle')}</p>
+                  <p className="mt-2 text-slate-700">{t('galleryPage.moodText')}</p>
                 </div>
                 <div className="rounded-[1.6rem] border border-sky-100 bg-sky-50/70 p-5">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600">Use</p>
-                  <p className="mt-2 text-slate-700">Open any image to browse the full set in the lightbox.</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600">{t('galleryPage.useTitle')}</p>
+                  <p className="mt-2 text-slate-700">{t('galleryPage.useText')}</p>
                 </div>
               </div>
             </div>
@@ -75,7 +77,7 @@ export default function GalleryPage() {
               type="button"
               onClick={() => openAt(imageIndex)}
               className="group overflow-hidden rounded-[1.8rem] border border-white/70 bg-white p-2 shadow-[0_20px_65px_rgba(14,165,233,0.1)]"
-              aria-label={`Open gallery image ${imageIndex + 1}`}
+              aria-label={t('galleryPage.openImage', { n: imageIndex + 1 })}
             >
               <img
                 src={image.src}
@@ -98,14 +100,14 @@ export default function GalleryPage() {
             />
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-white">
               <button type="button" onClick={prev} className="rounded-full bg-white/10 px-5 py-3 font-medium backdrop-blur transition hover:bg-white/20">
-                Previous
+                {t('galleryPage.prev')}
               </button>
               <span className="text-sm text-white/80">{index + 1} / {galleryImages.length}</span>
               <button type="button" onClick={next} className="rounded-full bg-white/10 px-5 py-3 font-medium backdrop-blur transition hover:bg-white/20">
-                Next
+                {t('galleryPage.next')}
               </button>
               <button type="button" onClick={close} className="rounded-full bg-sky-600 px-5 py-3 font-semibold text-white transition hover:bg-sky-500">
-                Close
+                {t('galleryPage.close')}
               </button>
             </div>
           </div>
