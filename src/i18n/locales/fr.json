@@ -9,34 +9,33 @@
       "ctaBook": "Réserver votre séjour",
       "ctaRooms": "Découvrir les chambres"
     },
-   "roomsPage": {
+  "roomsPage": {
   "title": "Nos Chambres",
   "intro": "Découvrez notre sélection de chambres et suites alliant charme de Marrakech et confort moderne. Chaque espace a été pensé pour offrir une atmosphère chaleureuse et authentique, tout en répondant aux standards de confort les plus élevés. Que vous voyagiez en couple, en famille ou entre amis, vous trouverez l’hébergement idéal pour un séjour inoubliable à Marrakech.",
   "book": "Réserver",
-  "pricePerNight": "{{price}} / nuit",
   "items": {
     "double": {
-      "title": "Chambre Double",
-      "desc": "Idéale pour les voyageurs indépendants ou les couples, notre spacieuse Chambre Double allie confort et élégance. Elle dispose de la climatisation, d’une entrée privée, d’une télévision à écran plat et d’une salle de bains moderne avec douche et sèche-cheveux. Vous pouvez choisir deux lits simples ou un grand lit double pour un sommeil paisible."
+      "title": "Chambre 01",
+      "desc": "La Chambre 01 fait partie des chambres disponibles sur place pour les voyageurs qui souhaitent un vrai hébergement au lieu du camping."
     },
     "triplePool": {
-      "title": "Chambre Triple",
-      "desc": "Parfaite pour les séjours entre amis ou en famille, la Chambre Triple est conçue pour accueillir jusqu’à trois voyageurs. Elle offre la climatisation, un balcon avec vue sur la piscine, ainsi qu’une salle de bains privative avec douche. Pour plus de flexibilité, vous pouvez opter pour trois lits séparés ou pour un grand lit double et un lit simple."
+      "title": "Chambre 02",
+      "desc": "La Chambre 02 propose une autre option d'hébergement sur place pour les clients qui recherchent un séjour simple et confortable dans la propriété."
     },
     "juniorSuite": {
-      "title": "Suite Junior",
-      "desc": "Un véritable cocon de détente, la Suite Junior séduit par sa grande terrasse équipée de transats, table et chaises – idéale pour profiter du soleil et de la vue sur le jardin. Elle comprend également un salon confortable avec fauteuils, un dressing spacieux (walk-in closet), ainsi qu’une chambre séparée. La climatisation et les murs insonorisés garantissent un confort optimal."
+      "title": "Chambre 03",
+      "desc": "La Chambre 03 met en avant une autre chambre disponible directement à Camping Tissirt pour les visiteurs qui préfèrent un hébergement intérieur."
     },
     "familySuite": {
-      "title": "Suite Familiale",
-      "desc": "Pour les familles ou les voyageurs en quête d’espace, la Suite Familiale offre une grande superficie idéale pour des séjours prolongés. Elle dispose d’un salon convivial, d’une cuisine entièrement équipée (plaque de cuisson, réfrigérateur, ustensiles, bouilloire), et d’une terrasse avec vue sur le jardin.Cette suite combine parfaitement confort, indépendance et atmosphère chaleureuse."
+      "title": "Chambre 01",
+      "desc": "Cette fiche utilise la série de photos de la Chambre 01 comme option supplémentaire de chambre sur place dans la galerie actuelle."
     }
   }
 }
 ,
     "roomsHome": {
-        "heading": "Chambres & Suites",
-        "sub": "Détails artisanaux, patios paisibles et draps impeccables. Choisissez votre refuge idéal.",
+        "heading": "Chambres Sur La Propriete",
+        "sub": "Camping Tissirt propose aussi des chambres sur place pour les voyageurs qui veulent plus de confort tout en restant dans le meme cadre paisible.",
         "viewMore": "Voir plus"
     },
     "reviews": {

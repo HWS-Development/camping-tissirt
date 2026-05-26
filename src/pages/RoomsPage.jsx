@@ -1,14 +1,13 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Lightbox from '../components/Lightbox'
-import { ROOM_IMAGES, getCover, getRoomImages } from '../data/roomImages'
+import { getCover, getRoomImages } from '../data/roomImages'
 
-// static pricing & folder keys
 const ROOM_META = [
-  { key: 'double',      priceEur: 95 },
-  { key: 'triplePool',  priceEur: 110 },
-  { key: 'juniorSuite', priceEur: 120 },
-  { key: 'familySuite', priceEur: 140 }
+  { key: 'double' },
+  { key: 'triplePool' },
+  { key: 'juniorSuite' },
+  { key: 'familySuite' }
 ]
 
 export default function RoomsPage() {
@@ -18,17 +17,13 @@ export default function RoomsPage() {
   const [lbTitle, setLbTitle] = useState('')
   const [lbStart, setLbStart] = useState(0)
 
-  // Build translated + sorted list once per language
   const rooms = useMemo(() => {
-    const items = ROOM_META.map((m) => {
-      const title = t(`roomsPage.items.${m.key}.title`)
-      const desc  = t(`roomsPage.items.${m.key}.desc`)
-      const priceLabel = t('roomsPage.pricePerNight', { price: `€${m.priceEur}` })
-      const cover = getCover(m.key)
-      return { ...m, title, desc, priceLabel, cover }
+    return ROOM_META.map((room) => {
+      const title = t(`roomsPage.items.${room.key}.title`)
+      const desc = t(`roomsPage.items.${room.key}.desc`)
+      const cover = getCover(room.key)
+      return { ...room, title, desc, cover }
     })
-    items.sort((a, b) => a.priceEur - b.priceEur)
-    return items
   }, [t])
 
   const openLightbox = (key, startIndex = 0, title = '') => {
@@ -52,7 +47,6 @@ export default function RoomsPage() {
               key={room.key}
               className="rounded-2xl overflow-hidden bg-white shadow-soft border border-black/5 flex flex-col"
             >
-              {/* COVER IMAGE — click to open room slider */}
               <button
                 type="button"
                 onClick={() => openLightbox(room.key, 0, room.title)}
@@ -75,10 +69,7 @@ export default function RoomsPage() {
                 <p className="mt-2 text-brand-black/70 flex-1 text-left leading-relaxed hyphens-auto">
   {room.desc}
 </p>
-
-
-                <div className="mt-4 flex items-center justify-between">
-               
+                <div className="mt-4 flex justify-end">
                   <div className="flex gap-2">
                     <button
                       type="button"
@@ -98,7 +89,6 @@ export default function RoomsPage() {
         </div>
       </div>
 
-      {/* Lightbox for current room */}
       <Lightbox
         open={lbOpen}
         images={lbImages}

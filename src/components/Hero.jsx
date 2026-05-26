@@ -1,4 +1,6 @@
 export default function Hero() {
+  const heroImage = `${process.env.PUBLIC_URL}/images/camp/${encodeURIComponent('WhatsApp Image 2026-05-26 at 11.17.50 (1).jpeg')}`
+
   return (
     <section id="home" className="relative overflow-hidden pt-10 text-slate-950">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(56,189,248,0.18),_transparent_24%),radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.12),_transparent_28%)]" />
@@ -54,7 +56,7 @@ export default function Hero() {
 
             <div className="relative rounded-[2.2rem] border border-white/70 bg-white/70 p-3 shadow-[0_30px_80px_rgba(14,165,233,0.12)] backdrop-blur-sm">
               <img
-                src={`${process.env.PUBLIC_URL}/images/tout/${encodeURIComponent('Screenshot 2025-09-24 164554.png')}`}
+                src={heroImage}
                 alt="Camping Tissirt overview"
                 className="h-[26rem] w-full rounded-[1.7rem] object-cover sm:h-[34rem]"
               />

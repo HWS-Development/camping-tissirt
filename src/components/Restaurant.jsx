@@ -1,3 +1,5 @@
+const restaurantImage = `${process.env.PUBLIC_URL}/images/hall/${encodeURIComponent('_DSC3559-HDR.jpg')}`
+
 export default function Restaurant() {
   return (
     <section id="restaurant" className="py-20">
@@ -10,7 +12,7 @@ export default function Restaurant() {
           </p>
           <div className="mt-8 overflow-hidden rounded-[1.8rem] border border-white/10">
             <img
-              src={`${process.env.PUBLIC_URL}/images/tout/${encodeURIComponent('restaurant.jpg')}`}
+              src={restaurantImage}
               alt="Restaurant at Camping Tissirt"
               className="h-64 w-full object-cover"
             />

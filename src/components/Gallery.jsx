@@ -1,19 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-
-const files = [
-  '0aae7b19-7564-4a0b-8951-69f61f112923.jpg','1d02a86b-5294-4108-8957-7799f2dfa0cf.jpg','1d5c777b-64a8-4b8e-a0df-7db0639bdc11.jpg',
-  '53c21403-64f3-4343-b059-8f14f04f2756.jpg','8e76de73-a983-4e1c-87d9-e3e3e1d8a70e.jpg','2025-06-11 (5).jpg','Screenshot 2025-09-15 160942.png',"155532.png"
-]
+import { galleryImages } from '../data/galleryImages'
 
 export default function Gallery() {
   const { t } = useTranslation()
-
-  // Build full public URLs (handles spaces/parentheses)
-  const urls = useMemo(
-    () => files.map((f) => `${process.env.PUBLIC_URL}/images/tout/${encodeURIComponent(f)}`),
-    []
-  )
+  const urls = galleryImages.map((image) => image.src)
 
   // Lightbox state
   const [open, setOpen] = useState(false)

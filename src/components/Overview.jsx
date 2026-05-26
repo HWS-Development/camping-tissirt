@@ -1,3 +1,5 @@
+const overviewImage = `${process.env.PUBLIC_URL}/images/hall/${encodeURIComponent('_DSC3564-HDR.jpg')}`
+
 const features = [
   'Pretty little campsite closed in a palm grove',
   'Excellent welcome from Hassan and Ali',
@@ -30,7 +32,7 @@ export default function Overview() {
         <div className="grid gap-5">
           <div className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 shadow-xl shadow-sky-100/70 backdrop-blur-sm">
             <img
-              src={`${process.env.PUBLIC_URL}/images/tout/${encodeURIComponent('Screenshot 2025-09-24 164510.png')}`}
+              src={overviewImage}
               alt="Palm grove at Camping Tissirt"
               className="h-64 w-full object-cover"
             />

@@ -1,47 +1,41 @@
-// Build URLs for images stored in public/images/<folder>/<file>
 const pub = (path) => `${process.env.PUBLIC_URL}${path}`
 
-/**
- * Map room keys -> folder name in /public/images and file list.
- * Keep this list in sync with your /public/images folders.
- */
 export const ROOM_IMAGES = {
   double: {
-    folder: 'chambreStandard',
+    folder: 'rooms/01',
     files: [
-      
-      'Screenshot 2025-09-15 160254.png',
-      'Screenshot 2025-09-15 160330.png',
-      'Screenshot 2025-09-15 160346.png',
-     
-    ]
-  },
-  familySuite: {
-    folder: 'suiteFamill', // <- folder name exactly as in your tree
-    files: [
-      'Screenshot 2025-09-15 160955.png',
-      'Screenshot 2025-09-15 160926.png',
-      'Screenshot 2025-09-15 160942.png',
-      
-   
-    ]
-  },
-  juniorSuite: {
-    folder: 'suiteJunior',
-    files: [
-      '43bc7c69-8a3e-4307-bdf3-3600de8d6def.jpg',
-      '107da34b-e0b8-430d-9bb6-1692997692e0.jpg',
-      '06243471-50cb-4a8e-9458-30dfa28c0d53.jpg',
+      '_DSC3484-HDR.jpg',
+      '_DSC3489-HDR.jpg',
+      '_DSC3479-HDR.jpg',
+      '_DSC3494-HDR.jpg',
+      '_DSC3474-HDR.jpg'
     ]
   },
   triplePool: {
-    folder: 'tripleRoom',
+    folder: 'rooms/02',
     files: [
-    
-      'Screenshot 2025-09-15 161322.png',
-      'Screenshot 2025-09-15 161339.png',
-      'Screenshot 2025-09-15 161354.png',
-    
+      '_DSC3509-HDR.jpg',
+      '_DSC3499-HDR.jpg',
+      '_DSC3504-HDR.jpg'
+    ]
+  },
+  juniorSuite: {
+    folder: 'rooms/03',
+    files: [
+      '_DSC3524-HDR.jpg',
+      '_DSC3514-HDR.jpg',
+      '_DSC3519-HDR.jpg',
+      '_DSC3529-HDR.jpg'
+    ]
+  },
+  familySuite: {
+    folder: 'rooms/01',
+    files: [
+      '_DSC3474-HDR.jpg',
+      '_DSC3494-HDR.jpg',
+      '_DSC3489-HDR.jpg',
+      '_DSC3484-HDR.jpg',
+      '_DSC3479-HDR.jpg'
     ]
   }
 }
@@ -49,10 +43,8 @@ export const ROOM_IMAGES = {
 export const getRoomImages = (key) => {
   const entry = ROOM_IMAGES[key]
   if (!entry) return []
-  return entry.files.map((f) => pub(`/images/${entry.folder}/${f}`))
+
+  return entry.files.map((file) => pub(`/images/${entry.folder}/${encodeURIComponent(file)}`))
 }
 
-export const getCover = (key) => {
-  const imgs = getRoomImages(key)
-  return imgs[0] || pub('/images/placeholder.jpg')
-}
+export const getCover = (key) => getRoomImages(key)[0] || pub(`/images/camp/${encodeURIComponent('WhatsApp Image 2026-05-26 at 11.17.50 (1).jpeg')}`)
